@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Cafe24Oneprettynight';
+  font-style: normal;
+  font-weight: 400;
+  src: url('font/Cafe24Oneprettynight-v2.0.woff2') format('woff2'),
+    url('font/Cafe24Oneprettynight-v2.0.woff') format('woff'),
+}
+
+/* @font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 500;
+  src: url('font/Pretendard-Medium.woff2') format('woff2'),
+    url('font/Pretendard-Medium.woff') format('woff'),
+    url('font/Pretendard-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 600;
+  src: url('font/Pretendard-SemiBold.woff2') format('woff2'),
+    url('font/Pretendard-SemiBold.woff') format('woff'),
+    url('font/Pretendard-SemiBold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 700;
+  src: url('font/Pretendard-Bold.woff2') format('woff2'),
+    url('font/Pretendard-Bold.woff') format('woff'),
+    url('font/Pretendard-Bold.otf') format('opentype');
+} */

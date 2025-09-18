@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>이영호 ❤️ 김다혜 결혼합니다.</title>
+
+	<!-- Plug-In css -->
+	<link rel="stylesheet" type="text/css" href="css/libs/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="css/libs/aos/aos.css">
+
+	<!-- Custom styles for this template -->
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+
+	<!-- Plug-In javascript -->
+	<script type="text/javascript" src="js/libs/jquery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/libs/swiper/swiper.min.js"></script>
+	<script type="text/javascript" src="js/libs/aos/aos.js"></script>
+	
+  <!-- Kakao Maps API -->
+	<!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fa8516637c54efde97ed355fdc94e6bd"></script> -->
+
+  	
+  <!-- Firebase SDK 추가 (반드시 먼저!) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+  <!-- UI JavaScript -->
+  <script type="text/javascript" src="js/ui.js"></script>
+
+ 
+</head>
+
+<body>
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- container -->
+    <div class="container">
+      <div class="content-wrap">
+        <audio loop="loop" src="img/speak.mp3" autoplay></audio>
+        <div class="fixed-btn-wrap">
+          <button type="button" class="btn-zoom"><span class="blind">확대</span></button>
+          <button type="button" class="btn-silent mute"><span class="blind">음소거</span></button>
+        </div>
+        
+        <div class="wedding-main" data-aos="fade-up">
+          <div class="wedding-inner">
+            <div class="title-box">
+              <span class="txt">THE WEDDING OF</span>
+              <span class="date">12월 13일</span>
+            </div>
+            <div class="img-area">
+              <span class="man">이영호</span>
+              <span class="woman">김다혜</span>
+              <div class="img-box">
+                <img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 020.png" alt="">
+              </div>
+            </div>
+            <div class="desc-box">
+              2025년 12월 13일 토요일 오후 6시 40분<br>가천컨벤션센터 5층
+            </div>
+          </div>
+        </div>
+
+        <div class="intro-wrap" data-aos="fade-up">
+          <p>누군가 너에 대해 묻는다면</p>
+          <p>나는 대답할거야</p>
+          <p>그 애는 나의 제목같은 사람이라고</p>
+          <p>모든 걸 제치고</p>
+          <p>언제나 맨 앞에 놓일 문장이라고</p>
+          <p>-하현 &lt;제목&gt; 중에서-</p>
+        </div>
+
+        <div class="img-box type-card" data-aos="fade-up">
+          <img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 013.png" alt="">
+        </div>
+
+        <div class="invite-wrap" data-aos="fade-up">
+          <p class="mtit">Invite you</p>
+
+          <p>새하얀 눈 위로 동백이 피어나는 겨울의 어느 날, <br>
+            저희 두 사람 사랑의 결실을 맺으려고 합니다.  <br>
+            하나가 되는 약속의 시간에  <br>
+            소중한 분들을 모시고 그 첫걸음을 함께 하고자 하오니 <br>
+            저희의 새로운 시작을 함께 빛내어 주세요.</p>
+
+          <div class="name-box">이재명 · 곽정순 <span>의 장남</span> 영호</div>
+          <div class="name-box">김영술 · 정옥현 <span>의 장녀</span> 다혜</div>
+        </div>
+
+        <div class="marry-wrap" data-aos="fade-up">
+          <div class="img-box"> 
+            <img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 011.png" alt="">
+          </div>
+          <div class="item-wrap">
+            <div class="item">
+              <p class="tit">신랑 <span>이영호</span></p>
+              <p>든든한 ENFJ</p>
+              <p>신부 바라기💖</p>
+              <p>#곰돌이 #다혜가제일좋아</p>
+            </div>
+            <div class="item">
+              <p class="tit">신부 <span>김다혜</span></p>
+              <p>사랑가득 INFP</p>
+              <p>신랑 바라기💖</p>
+              <p>#곰돌이덕후 #노는게제일좋아</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="calendar-wrap" data-aos="fade-up">
+          <p class="mtit">Calendar</p>
+          <div class="cal-inner">
+            <p class="month">12월</p>
+            <table class="tbl-cal">
+              <thead>
+                <tr>
+                  <th>일</th>
+                  <th>월</th>
+                  <th>화</th>
+                  <th>수</th>
+                  <th>목</th>
+                  <th>금</th>
+                  <th>토</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>8</td>
+                  <td>9</td>
+                  <td>10</td>
+                  <td>11</td>
+                  <td>12</td>
+                  <td class="wedding-day"><span>13</span></td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td>15</td>
+                  <td>16</td>
+                  <td>17</td>
+                  <td>18</td>
+                  <td>19</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>21</td>
+                  <td>22</td>
+                  <td>23</td>
+                  <td>24</td>
+                  <td>25</td>
+                  <td>26</td>
+                  <td>27</td>
+                </tr>
+                <tr>
+                  <td>28</td>
+                  <td>29</td>
+                  <td>30</td>
+                  <td>31</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      
+        <div class="gallery-wrap" data-aos="fade-up">
+          <p class="mtit">Gallery</p>
+          <div class="gallery-inner">
+            <ul class="gallery-list">
+              <li>
+                <button type="button" class="gallery-item" data-pop-tg="popFull">
+                  <img src="img/KakaoTalk_Photo_2025-07-18-15-41-36 001.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button type="button" class="gallery-item" data-pop-tg="popFull">
+                  <img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 002.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button type="button" class="gallery-item" data-pop-tg="popFull">
+                  <img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 003.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button type="button" class="gallery-item" data-pop-tg="popFull">
+                  <img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 004.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button type="button" class="gallery-item" data-pop-tg="popFull">
+                  <img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 005.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button type="button" class="gallery-item" data-pop-tg="popFull">
+                  <img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 006.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button type="button" class="gallery-item" data-pop-tg="popFull">
+                  <img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 007.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button type="button" class="gallery-item" data-pop-tg="popFull">
+                  <img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 008.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button type="button" class="gallery-item" data-pop-tg="popFull">
+                  <img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 009.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button type="button" class="gallery-item" data-pop-tg="popFull">
+                  <img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 010.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button type="button" class="gallery-item" data-pop-tg="popFull">
+                  <img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 011.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button type="button" class="gallery-item" data-pop-tg="popFull">
+                  <img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 012.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button type="button" class="gallery-item" data-pop-tg="popFull">
+                  <img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 013.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button type="button" class="gallery-item" data-pop-tg="popFull">
+                  <img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 014.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button type="button" class="gallery-item" data-pop-tg="popFull">
+                  <img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 015.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button type="button" class="gallery-item" data-pop-tg="popFull">
+                  <img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 016.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button type="button" class="gallery-item" data-pop-tg="popFull">
+                  <img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 017.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button type="button" class="gallery-item" data-pop-tg="popFull">
+                  <img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 018.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button type="button" class="gallery-item" data-pop-tg="popFull">
+                  <img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 019.png" alt="">
+                </button>
+              </li>
+              <li>
+                <button type="button" class="gallery-item" data-pop-tg="popFull">
+                  <img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 020.png" alt="">
+                </button>
+              </li>
+            </ul>
+            <button type="button" class="btn-more">더보기</button>
+          </div>
+        </div>
+
+        <div class="location-wrap" data-aos="fade-up">
+          <p class="mtit">Location</p>
+          <p class="stit">오시는길</p>
+
+          <div class="address-box" data-copy-box>
+            <p data-copy-tg>경기도 성남시 수정구 성남대로 1342</p>
+            <p>가천컨벤션센터 5층</p>
+            <p>031-755-3000</p>
+            <button type="button" class="btn-copy">주소복사</button>
+          </div>
+          <div class="map-box">
+            <div id="map" style="width:100%;height:300px;"></div>
+          </div>
+          
+          <div class="how-to-go">
+            <div class="item">
+              <p class="tit map">약도</p>
+              <div class="img-box">
+                <img src="img/img-map.png" alt="">
+              </div>
+            </div>
+            <div class="item">
+              <p class="tit subway">지하철</p>
+              <p>수인분당선 가천대역 1번 출구</p>
+              <p>도보 3분</p>
+            </div>
+            <div class="item">
+              <p class="tit bus">버스</p>
+              <p>일반 : 30, 32, 100. 100출, 119, 357, 4425</p>
+              <p>간선 : 302, 303, 422, 452</p>
+              <p>광역 : 500-1, 500-1A, 500-2, 500-2N, 1117, 반디1, 반디1-1</p>
+            </div>
+            <div class="item">
+              <p class="tit car">자가용</p>
+              <p>도로명 주소 : 경기도 성남시 수정구 성남대로 1342</p>
+              <p>지번 주소 : 경기 성남시 수정구 복정동 620-2</p>
+            </div>
+            <div class="item">
+              <p class="tit parking">주차</p>
+              <p>지하 주차장 이용(지하4층 약 1500대 수용 가능)</p>
+              <p>당일 무료 주차(주차권 없음)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-info-wrap" data-aos="fade-up">
+          <p class="mtit">Information</p>
+          <p class="stit">식사</p>
+
+          <div class="img-box">
+            <img src="img/143.jpg" alt="">
+          </div>
+
+          <p class="desc">식사는 결혼식 및 사진 촬영이 끝난 후 <br>
+          웨딩홀 7층 연회장에서 한상차림으로 진행됩니다. <br>
+          모자람 없이 리필도 가능하오니<br>
+          마음껏 식사를 즐겨주시기 바랍니다.</p>
+        </div>
+
+        <div class="account-wrap" data-aos="fade-up">
+          <p class="mtit">Account</p>
+          <p class="stit">마음 전하실 곳</p>
+
+          <p class="desc">
+            참석이 어려워 직접 축하를 전하지 못하는</br>
+            분들을 위해 계좌번호를 기재하였습니다.</br>
+            넓은 마음으로 양해 부탁드립니다.</br>
+            전해주시는 진심은 소중하게 간직하여</br>
+            좋은 부부의 모습으로 보답하겠습니다.
+          </p>
+
+          <div class="fold-box">
+            <div class="fold-header">
+              <p>신랑측</p>
+              <button type="button" class="btn-fold">
+                <span class="blind">펼치기</span>
+              </button>
+            </div>
+
+            <div class="fold-cont">
+              <div class="account-box" data-copy-box>
+                <p>신랑 <span>이영호</span></p>
+                <p class="account-num" data-copy-tg>기업 204-103392-01-011</p>
+                <button type="button" class="btn-copy">복사</button>
+              </div>
+              <div class="account-box" data-copy-box>
+                <p>아버지 <span>이재명</span></p>
+                <p class="account-num" data-copy-tg>농협 351-6223-4214-03</p>
+                <button type="button" class="btn-copy">복사</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="fold-box">
+            <div class="fold-header">
+              <p>신부측</p>
+              <button type="button" class="btn-fold">
+                <span class="blind">펼치기</span>
+              </button>
+            </div>
+
+            <div class="fold-cont">
+              <div class="account-box" data-copy-box> 
+                <p>신부 <span>김다혜</span></p>
+                <p class="account-num" data-copy-tg>우리 1002-051-703370</p>
+                <button type="button" class="btn-copy">복사</button>
+              </div>
+              <div class="account-box" data-copy-box>
+                <p>아버지 <span>김영술</span></p>
+                <p class="account-num" data-copy-tg>기업 4660-521-3601018</p>
+                <button type="button" class="btn-copy">복사</button>
+              </div>
+              <div class="account-box" data-copy-box>
+                <p>어머니 <span>정옥현</span></p>
+                <p class="account-num" data-copy-tg>우리 1002-532-248013</p>
+                <button type="button" class="btn-copy">복사</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="comment-wrap" data-aos="fade-up">
+          <p class="mtit">Message</p>
+
+          <p class="stit">
+            저희 둘에게 따뜻한 방명록을 남겨주세요.
+          </p>
+
+          <ul class="card-list">
+            <li>
+              <div class="card-box">
+                <button type="button" class="btn-edit" data-pop-tg="popComment"><span class="blind">수정</span></button>
+                <button type="button" class="btn-del" data-pop-tg="popCommentDel"><span class="blind">삭제</span></button>
+                <p class="desc">하윤아❤️ 결혼을 진심으로 축하한다! <br>
+                  민호 오빠랑 둘이 지금처럼 행복하게 백년해로 하기를😍 <br>
+                  항상 웃음 가득한 하루하루 보내길 바랄게! <br>
+                  두 사람의 손길 가득한 청첩장 너무 예쁘다. <br>
+                  그림 같은 결혼식도 얼마나 예쁠지 벌써 넘 기대됩니당 <br> 𝐻𝑎𝑝𝑝𝑦 𝑊𝑒𝑑𝑑𝑖𝑛𝑔💗</p>
+
+                  <div class="card-info">
+                    <div class="name">From <span>리나</span></div>
+                    <div class="date">2025.07.22 10:34</div>
+                  </div>
+              </div>
+            </li>
+            <li>
+              <div class="card-box">
+                <button type="button" class="btn-edit" data-pop-tg="popComment"><span class="blind">수정</span></button>
+                <button type="button" class="btn-del" data-pop-tg="popCommentDel"><span class="blind">삭제</span></button>
+                <p class="desc">하윤아❤️ 결혼을 진심으로 축하한다! <br>
+                  민호 오빠랑 둘이 지금처럼 행복하게 백년해로 하기를😍 <br>
+                  항상 웃음 가득한 하루하루 보내길 바랄게! <br>
+                  두 사람의 손길 가득한 청첩장 너무 예쁘다. <br>
+                  그림 같은 결혼식도 얼마나 예쁠지 벌써 넘 기대됩니당 <br> 𝐻𝑎𝑝𝑝𝑦 𝑊𝑒𝑑𝑑𝑖𝑛𝑔💗</p>
+
+                  <div class="card-info">
+                    <div class="name">From <span>리나</span></div>
+                    <div class="date">2025.07.22 10:34</div>
+                  </div>
+              </div>
+            </li>
+          </ul>
+
+          <button type="button" class="btn-comment" data-pop-tg="popComment">나도 방명록 남기기</button>
+
+          <p class="copyright">Made by. eune_jjj 🤟 <br>결혼 축하한다 짜식들아🥳 오래오래 행복하게 잘살아</p>
+        </div>
+        
+        <button type="button" class="btn-top"><span class="blind">TOP</span></button>
+      </div>
+    </div>
+    <!-- //container -->
+  </div>
+  <!-- //Wrapper -->
+  <!-- popup area -->
+  <div class="popup-wrap" id="popComment">
+    <div class="popup-box">
+      <div class="popup-mid">
+        <div class="popup-bg"></div>
+        <div class="popup">
+          <div class="pop-header">
+            <h2 class="comment-desc">저희 둘의 결혼을 함께 축하해 주세요💗</h2>
+            <button type="button" class="btn-close" data-pop-close><span class="blind">팝업 닫기</span></button>
+          </div>
+          <div class="pop-body">
+            
+            <div class="comment-box">
+              <div class="ip-box">
+                <input type="text" class="form-ip" placeholder="성함을 남겨주세요">
+              </div>
+              <div class="ip-box">
+                <input type="password" class="form-ip" placeholder="비밀번호를 입력해주세요">
+              </div>
+              <div class="ip-box">
+                <textarea maxlength="200" class="form-ta" placeholder="축하 메시지를 남겨주세요.(최대 200자)"></textarea>
+              </div>
+              <button type="button" class="btn-comment">방명록 남기기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="popup-wrap" id="popCommentEdit">
+    <div class="popup-box">
+      <div class="popup-mid">
+        <div class="popup-bg"></div>
+        <div class="popup">
+          <div class="pop-header">
+            <h2 class="comment-desc">내용을 수정할까요?✏️</h2>
+            <button type="button" class="btn-close" data-pop-close><span class="blind">팝업 닫기</span></button>
+          </div>
+          <div class="pop-body">
+            
+            <div class="comment-box">
+              <div class="ip-box">
+                <input type="text" class="form-ip edit-name" placeholder="성함을 입력해주세요" readonly>
+              </div>
+              <div class="ip-box">
+                <input type="password" class="form-ip edit-password" placeholder="비밀번호를 입력해주세요">
+              </div>
+              <div class="ip-box">
+                <textarea maxlength="200" class="form-ta edit-message" placeholder="수정할 메시지를 입력해주세요.(최대 200자)"></textarea>
+              </div>
+              <p class="err-msg">비밀번호가 달라요</p>
+              <button type="button" class="btn-comment">수정하기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="popup-wrap" id="popCommentDel">
+    <div class="popup-box">
+      <div class="popup-mid">
+        <div class="popup-bg"></div>
+        <div class="popup">
+          <div class="pop-header">
+            <h2 class="comment-desc">방명록을 지울까요?🥺</h2>
+            <button type="button" class="btn-close" data-pop-close><span class="blind">팝업 닫기</span></button>
+          </div>
+          <div class="pop-body">
+            
+            <div class="comment-box">
+              <div class="ip-box">
+                <input type="password" class="form-ip" placeholder="비밀번호를 입력해주세요">
+                <p class="err-msg">비밀번호가 달라요</p>
+              </div>
+              <button type="button" class="btn-comment">지우기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup-wrap" id="popFull">
+    <div class="popup-box">
+      <div class="popup-full">
+        <div class="popup-bg"></div>
+        <div class="popup">
+          <div class="pop-header">
+            <button type="button" class="btn-close" data-pop-close><span class="blind">팝업 닫기</span></button>
+          </div>
+          <div class="pop-body">
+            <div class="gallery-swiper">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <button type="button" data-pop-close>
+                      <span class="img-box"><img src="img/KakaoTalk_Photo_2025-07-18-15-41-36 001.png" alt=""></span>
+                    </button>
+                  </div>
+                  <div class="swiper-slide">
+                    <button type="button" data-pop-close>
+                      <span class="img-box"><img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 002.png" alt=""></span>
+                    </button>
+                  </div>
+                  <div class="swiper-slide">
+                    <button type="button" data-pop-close>
+                      <span class="img-box"><img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 003.png" alt=""></span>
+                    </button>
+                  </div>
+                  <div class="swiper-slide">
+                    <button type="button" data-pop-close>
+                      <span class="img-box"><img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 004.png" alt=""></span>
+                    </button>
+                  </div>
+                  <div class="swiper-slide">
+                    <button type="button" data-pop-close>
+                      <span class="img-box"><img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 005.png" alt=""></span>
+                    </button>
+                  </div>
+                  <div class="swiper-slide">
+                    <button type="button" data-pop-close>
+                      <span class="img-box"><img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 006.png" alt=""></span>
+                    </button>
+                  </div>
+                  <div class="swiper-slide">
+                    <button type="button" data-pop-close>
+                      <span class="img-box"><img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 007.png" alt=""></span>
+                    </button>
+                  </div>
+                  <div class="swiper-slide">
+                    <button type="button" data-pop-close>
+                      <span class="img-box"><img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 008.png" alt=""></span>
+                    </button>
+                  </div>
+                  <div class="swiper-slide">
+                    <button type="button" data-pop-close>
+                      <span class="img-box"><img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 009.png" alt=""></span>
+                    </button>
+                  </div>
+                  <div class="swiper-slide">
+                    <button type="button" data-pop-close>
+                      <span class="img-box"><img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 010.png" alt=""></span>
+                    </button>
+                  </div>
+                  <div class="swiper-slide">
+                    <button type="button" data-pop-close>
+                      <span class="img-box"><img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 011.png" alt=""></span>
+                    </button>
+                  </div>
+                  <div class="swiper-slide">
+                    <button type="button" data-pop-close>
+                      <span class="img-box"><img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 012.png" alt=""></span>
+                    </button>
+                  </div>
+                  <div class="swiper-slide">
+                    <button type="button" data-pop-close>
+                      <span class="img-box"><img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 013.png" alt=""></span>
+                    </button>
+                  </div>
+                  <div class="swiper-slide">
+                    <button type="button" data-pop-close>
+                      <span class="img-box"><img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 014.png" alt=""></span>
+                    </button>
+                  </div>
+                  <div class="swiper-slide">
+                    <button type="button" data-pop-close>
+                      <span class="img-box"><img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 015.png" alt=""></span>
+                    </button>
+                  </div>
+                  <div class="swiper-slide">
+                    <button type="button" data-pop-close>
+                      <span class="img-box"><img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 016.png" alt=""></span>
+                    </button>
+                  </div>
+                  <div class="swiper-slide">
+                    <button type="button" data-pop-close>
+                      <span class="img-box"><img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 017.png" alt=""></span>
+                    </button>
+                  </div>
+                  <div class="swiper-slide">
+                    <button type="button" data-pop-close>
+                      <span class="img-box"><img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 018.png" alt=""></span>
+                    </button>
+                  </div>
+                  <div class="swiper-slide">
+                    <button type="button" data-pop-close>
+                      <span class="img-box"><img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 019.png" alt=""></span>
+                    </button>
+                  </div>
+                  <div class="swiper-slide">
+                    <button type="button" data-pop-close>
+                      <span class="img-box"><img src="img/KakaoTalk_Photo_2025-07-18-15-41-37 020.png" alt=""></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- // popup area -->
+</body>
+
+<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=1d0fac1f0c427df3f1932e161f17c570"></script>
+<script>
+  
+  function initMap() {
+    var container = document.getElementById('map');
+    var options = {
+      center: new kakao.maps.LatLng(37.4496, 127.1269),
+      level: 3
+    };
+    var map = new kakao.maps.Map(container, options);
+
+    // 마커 생성 코드 추가
+    var markerPosition  = new kakao.maps.LatLng(37.4496, 127.1269); 
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+    marker.setMap(map);
+  }
+
+  setTimeout(() => {
+    kakao.maps.load(initMap);
+  }, 1000);
+</script>
+
+
+</html>
