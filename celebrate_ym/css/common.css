@@ -798,8 +798,25 @@ body {
   }
   
   .tbl-cal .wedding-day::after {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     bottom: -1rem;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 2px;
+  }
+}
+
+/* 더 작은 화면 대응 (350px 이하) */
+@media (max-width: 350px) {
+  .tbl-cal .wedding-day::after {
+    font-size: 0.7rem;
+    content: "오후 4:40";
+    bottom: -0.8rem;
+  }
+  
+  .cal-inner {
+    padding: 15px 10px;
   }
 }
 
