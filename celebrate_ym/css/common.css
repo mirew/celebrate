@@ -59,7 +59,7 @@ body {
 
 /* 빨간색 구역 1: 헤더 + 메인사진 절반 */
 .red-section-1 {
-  background: #820201;
+  background: #FEFAEF;
   padding-bottom: 40px;
   margin: 0;
   display: block;
@@ -81,13 +81,13 @@ body {
   font-size: 32px;
   font-weight: normal;
   margin: 0 0 20px;
-  color: #fff;
+  color: #333;
   letter-spacing: 2px;
 }
 
 .wedding-header .subtitle {
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.9);
+  color: #820201;
   margin-bottom: 30px;
   line-height: 1.6;
 }
@@ -104,7 +104,7 @@ body {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 150px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
@@ -166,7 +166,7 @@ body {
 
 /* 빨간색 구역 2: 날짜 및 시간 */
 .red-section-2 {
-  background: #820201;
+  background: #FEFAEF;
   padding: 40px 0;
   margin: 0;
   margin-top: -1px;
@@ -180,20 +180,20 @@ body {
 
 .wedding-date {
   font-size: 24px;
-  color: #fff;
+  color: #333;
   margin-bottom: 10px;
   font-weight: normal;
 }
 
 .wedding-time {
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.9);
+  color: #820201;
   margin-bottom: 30px;
 }
 
 .wedding-location {
   font-size: 20px;
-  color: #fff;
+  color: #333;
   font-weight: normal;
 }
 
@@ -312,7 +312,7 @@ body {
 
 /* 빨간색 구역 3: 지도 영역 */
 .red-section-3 {
-  background: #820201;
+  background: #FEFAEF;
   padding: 40px 0;
   margin: 0;
   margin-top: -1px;
@@ -326,7 +326,7 @@ body {
 .map-title {
   text-align: center;
   font-size: 24px;
-  color: #fff;
+  color: #333;
   margin-bottom: 20px;
   font-weight: normal;
 }
@@ -385,10 +385,10 @@ body {
   display: block;
   width: 100%;
   padding: 15px;
-  background: #820201;
-  border: none;
+  background: rgba(130, 2, 1, 0.1);
+  border: 2px solid rgba(130, 2, 1, 0.2);
   border-radius: 25px;
-  color: #fff;
+  color: #820201;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
@@ -400,10 +400,10 @@ body {
 }
 
 .btn-write:hover {
-  background: #6B1128;
+  background: rgba(130, 2, 1, 0.15);
+  border-color: rgba(130, 2, 1, 0.3);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(130, 2, 1, 0.4);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 20px rgba(130, 2, 1, 0.3);
 }
 
 /* 카드 리스트 */
@@ -481,7 +481,7 @@ body {
 
 /* 빨간색 구역 4: 푸터 */
 .red-section-4 {
-  background: #820201;
+  background: #FEFAEF;
   padding: 40px 0 60px;
   margin: 0;
   margin-top: -1px;
@@ -491,14 +491,14 @@ body {
 .wedding-footer {
   text-align: center;
   padding: 0 30px;
-  color: rgba(255, 255, 255, 0.9);
+  color: #820201;
   font-size: 16px;
 }
 
 
 /* 달력 영역 */
 .red-section-calendar {
-  background: #820201;
+  background: #FEFAEF;
   padding: 40px 0;
   margin: 0;
   margin-top: -1px;
@@ -511,7 +511,7 @@ body {
 
 .calendar-title {
   font-size: 24px;
-  color: #fff;
+  color: #333;
   margin-bottom: 30px;
   font-weight: normal;
 }
@@ -569,7 +569,7 @@ body {
   display: inline-block;
   position: relative;
   z-index: 2;
-  color: #fff;
+  color: #333;
   font-weight: 600;
 }
 
@@ -611,7 +611,7 @@ body {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.2);
   border: none;
-  color: #fff;
+  color: #333;
   font-size: 20px;
   cursor: pointer;
   backdrop-filter: blur(10px);
@@ -639,9 +639,9 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: rgba(130, 2, 1, 0.8);
-  border: none;
-  color: #fff;
+  background: rgba(130, 2, 1, 0.15);
+  border: 2px solid rgba(130, 2, 1, 0.3);
+  color: #820201;
   font-size: 20px;
   cursor: pointer;
   z-index: 1001;
@@ -655,7 +655,8 @@ body {
 }
 
 .btn-top:hover {
-  background: rgba(130, 2, 1, 1);
+  background: rgba(130, 2, 1, 0.25);
+  border-color: rgba(130, 2, 1, 0.5);
   transform: translateY(-2px);
 }
 
@@ -671,7 +672,7 @@ body {
 
 .map-title {
   font-size: 24px;
-  color: #fff;
+  color: #333;
   margin-bottom: 30px;
   font-weight: normal;
 }
@@ -692,12 +693,13 @@ body {
 }
 
 .location-info {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(130, 2, 1, 0.05);
   padding: 20px;
   border-radius: 15px;
   margin-bottom: 20px;
   color: #333;
   line-height: 1.6;
+  border: 2px solid rgba(130, 2, 1, 0.1);
 }
 
 .how-to-go {
@@ -707,10 +709,11 @@ body {
 }
 
 .transport-item {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(130, 2, 1, 0.05);
   padding: 15px;
   border-radius: 10px;
   text-align: left;
+  border: 2px solid rgba(130, 2, 1, 0.1);
 }
 
 .transport-title {
@@ -793,16 +796,14 @@ body {
   }
   
   .tbl-cal td {
-    height: 3.2rem;
+    height: 4rem;
     font-size: 1.2rem;
   }
   
   .tbl-cal .wedding-day::after {
     font-size: 0.8rem;
     bottom: -1rem;
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: nowrap;
     padding: 0 2px;
   }
 }
@@ -915,7 +916,7 @@ body {
 
 /* 빨간색 구역 5: 계좌 정보 */
 .red-section-5 {
-  background: #820201;
+  background: #FEFAEF;
   padding: 40px 0;
   margin: 0;
   margin-top: -1px;
@@ -929,20 +930,20 @@ body {
 
 .account-title {
   font-size: 24px;
-  color: #fff;
+  color: #333;
   margin-bottom: 10px;
   font-weight: normal;
 }
 
 .account-subtitle {
   font-size: 18px;
-  color: #fff;
+  color: #333;
   margin-bottom: 30px;
   font-weight: normal;
 }
 
 .account-description {
-  color: #fff;
+  color: #333;
   line-height: 1.6;
   margin-bottom: 40px;
   font-size: 16px;
@@ -960,11 +961,14 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background: rgba(130, 2, 1, 0.9);
-  color: #fff;
+  background: rgba(130, 2, 1, 0.1);
+  color: #820201;
   cursor: pointer;
   position: relative;
   z-index: 10;
+  border: 2px solid rgba(130, 2, 1, 0.2);
+  border-radius: 10px;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .account-fold-header p {
@@ -976,9 +980,14 @@ body {
 .btn-account-fold {
   background: none;
   border: none;
-  color: #fff;
+  color: #820201;
   cursor: pointer;
   font-size: 20px;
+}
+
+.account-fold-header:hover {
+  background: rgba(130, 2, 1, 0.15);
+  border-color: rgba(130, 2, 1, 0.3);
 }
 
 .btn-account-fold::after {
@@ -995,6 +1004,8 @@ body {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease, padding 0.3s ease;
+  background: #FEFAEF;
+  border-radius: 0 0 10px 10px;
 }
 
 .account-fold-box.active .account-fold-content {
@@ -1040,25 +1051,27 @@ body {
 }
 
 .btn-copy {
-  background: #820201;
-  color: #fff;
-  border: none;
+  background: #FEFAEF;
+  color: #333;
+  border: 2px solid transparent;
   padding: 8px 15px;
   border-radius: 5px;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
   cursor: pointer;
   font-size: 12px;
-  transition: background 0.3s ease;
   position: relative;
   z-index: 10;
 }
 
 .btn-copy:hover {
-  background: #A01515;
+  background: rgba(130, 2, 1, 0.15);
+  border: 2px solid rgba(130, 2, 1, 0.3);
+  color: #820201;
 }
 
 /* 빨간색 구역 6: 푸터 */
 .red-section-6 {
-  background: #820201;
+  background: #FEFAEF;
   padding: 40px 0 40px;
   margin: 0;
   margin-top: -1px;
@@ -1151,7 +1164,7 @@ body.popup-open {
 .popup {
   position: relative;
   z-index: 10;
-  background: #fff;
+  background: #FEFAEF;
   border-radius: 20px;
   max-width: 90%;
   max-height: 90%;
@@ -1180,7 +1193,7 @@ body.popup-open {
   align-items: center;
   padding: 20px;
   border-bottom: 1px solid rgba(130, 2, 1, 0.1);
-  background: #fff;
+  background: #FEFAEF;
 }
 
 .popup-full .pop-header {
@@ -1234,7 +1247,7 @@ body.popup-open {
 }
 
 .popup-full .btn-close::before {
-  color: #fff;
+  color: #333;
 }
 
 .pop-body {
@@ -1321,13 +1334,13 @@ body.popup-open {
 }
 
 .gallery-swiper .swiper-pagination-bullet-active {
-  background: #fff;
+  background: #FEFAEF;
   transform: scale(1.2);
 }
 
 .gallery-swiper .swiper-button-next,
 .gallery-swiper .swiper-button-prev {
-  color: #fff;
+  color: #333;
   background: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   width: 50px;
@@ -1365,7 +1378,7 @@ body.popup-open {
   border: 2px solid rgba(130, 2, 1, 0.1);
   border-radius: 10px;
   font-size: 16px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
   transition: all 0.3s ease;
   box-sizing: border-box;
   font-family: inherit;
@@ -1387,7 +1400,7 @@ body.popup-open {
   border: 2px solid rgba(130, 2, 1, 0.1);
   border-radius: 10px;
   font-size: 16px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
   transition: all 0.3s ease;
   box-sizing: border-box;
   font-family: inherit;
@@ -1409,9 +1422,9 @@ body.popup-open {
 .btn-comment {
   width: 100%;
   padding: 15px;
-  background: #820201;
-  color: #fff;
-  border: none;
+  background: rgba(130, 2, 1, 0.1);
+  color: #820201;
+  border: 2px solid rgba(130, 2, 1, 0.2);
   border-radius: 25px;
   font-size: 16px;
   font-weight: bold;
@@ -1423,9 +1436,10 @@ body.popup-open {
 }
 
 .btn-comment:hover {
-  background: #A01515;
+  background: rgba(130, 2, 1, 0.15);
+  border-color: rgba(130, 2, 1, 0.3);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(130, 2, 1, 0.4);
+  box-shadow: 0 6px 20px rgba(130, 2, 1, 0.3);
 }
 
 .btn-comment:active {
