@@ -10,13 +10,13 @@ let _scrollTop = 0,
 
 // Firebase 설정
 const firebaseConfig = {
-  apiKey: "AIzaSyAUEex6zWiKpgK0oYOt_Q9QbkAaxvKyuR8",
-  authDomain: "celebrate-e9d31.firebaseapp.com",
-  projectId: "celebrate-e9d31",
-  storageBucket: "celebrate-e9d31.firebasestorage.app",
-  messagingSenderId: "768572407327",
-  appId: "1:768572407327:web:8da694d2c5c502ab681f2a",
-  measurementId: "G-1C7E2BGSBG"
+  apiKey: "AIzaSyD3Qv_gttiKidOva_ZPGLHvwJbrXZhpDag",
+  authDomain: "celebrate-ym.firebaseapp.com",
+  projectId: "celebrate-ym",
+  storageBucket: "celebrate-ym.firebasestorage.app",
+  messagingSenderId: "291552077886",
+  appId: "1:291552077886:web:8f450ce4f9bf5fdb56896f",
+  measurementId: "G-7G2FYBN930"
 };
 
 // Firebase 초기화
