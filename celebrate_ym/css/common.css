@@ -517,7 +517,7 @@ body {
 }
 
 .cal-inner {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(251, 241, 222, 0.8);
   border-radius: 20px;
   padding: 30px 20px;
   margin-top: 2rem;
@@ -603,6 +603,143 @@ body {
   top: 20px;
   right: 20px;
   z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 확대 버튼 */
+.btn-zoom {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9) url(../img/ico-zoomin.png) center / 60% no-repeat;
+  border: 1px solid rgba(130, 2, 1, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-zoom:hover {
+  background: rgba(255, 255, 255, 1) url(../img/ico-zoomin.png) center / 60% no-repeat;
+  transform: scale(1.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.btn-zoom.zoomout {
+  background-image: url(../img/ico-zoomout.png);
+}
+
+.btn-zoom.zoomout:hover {
+  background: rgba(255, 255, 255, 1) url(../img/ico-zoomout.png) center / 60% no-repeat;
+}
+
+/* 전체 확대 효과 */
+html.zoom {
+  font-size: 140%;
+}
+
+html.zoom .wedding-header h1 {
+  font-size: 30px;
+}
+
+html.zoom .wedding-header .subtitle {
+  font-size: 24px;
+}
+
+html.zoom .couple-names {
+  font-size: 30px;
+}
+
+html.zoom .couple-parents {
+  font-size: 18px;
+}
+
+html.zoom .couple-parents .parent-info {
+  font-size: 18px;
+}
+
+html.zoom .wedding-message p {
+  font-size: 22px;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+html.zoom .wedding-date {
+  font-size: 30px;
+}
+
+html.zoom .wedding-time {
+  font-size: 28px;
+}
+
+html.zoom .cal-inner {
+  padding: 30px 15px 40px;
+}
+
+html.zoom .tbl-cal .wedding-day::after {
+  font-size: 0.8rem;
+  bottom: -0.8rem;
+  white-space: nowrap;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+html.zoom .wedding-location {
+  font-size: 22px;
+}
+
+html.zoom .gallery-title {
+  font-size: 30px;
+}
+
+html.zoom .map-title {
+  font-size: 30px;
+}
+
+html.zoom .location-info {
+  font-size: 20px;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+
+html.zoom .how-to-go .transport-item {
+  font-size: 18px;
+}
+
+html.zoom .how-to-go .transport-title {
+  font-size: 20px;
+}
+
+html.zoom .how-to-go .transport-item p {
+  font-size: 18px;
+}
+
+html.zoom .meal-title {
+  font-size: 30px;
+}
+
+html.zoom .meal-description {
+  font-size: 20px;
+}
+
+html.zoom .account-title {
+  font-size: 30px;
+}
+
+html.zoom .account-description {
+  font-size: 20px;
+}
+
+html.zoom .account-box p {
+  font-size: 18px;
+}
+
+html.zoom .guestbook-title {
+  font-size: 30px;
+}
+
+html.zoom .guestbook-subtitle {
+  font-size: 20px;
 }
 
 .btn-silent {
@@ -830,7 +967,7 @@ body {
 }
 
 .transport-item {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(251, 241, 222, 0.8);
   padding: 20px;
   border-radius: 15px;
   text-align: center;
@@ -950,8 +1087,7 @@ body {
 }
 
 .account-fold-box {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 15px;
+  background: rgba(251, 241, 222, 0.8);
   margin-bottom: 20px;
   overflow: hidden;
 }
