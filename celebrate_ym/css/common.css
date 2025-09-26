@@ -576,10 +576,10 @@ body {
 .tbl-cal .wedding-day::before {
   content: "♥";
   position: absolute;
-  top: 50%;
+  top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 5rem;
+  font-size: 4rem;
   color: #d08c95;
   z-index: 1;
 }
@@ -680,8 +680,9 @@ html.zoom .tbl-cal .wedding-day::after {
   font-size: 0.8rem;
   bottom: -0.8rem;
   white-space: nowrap;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 0;
+  left: auto;
+  transform: none;
 }
 
 html.zoom .wedding-location {

@@ -48,8 +48,8 @@ $(document).ready(function(){
   setFold();
   setCopyText();
   setGalleryMore();
-  setAudioControl();
   setZoom();
+  setAudioControl();
   setGoTop();
   setAccountFold();
   setCopyAccount();
