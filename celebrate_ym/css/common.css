@@ -293,8 +293,8 @@ body {
 }
 
 .btn-more:hover {
-  background: rgba(130, 2, 1, 0.3);
-  border-color: rgba(130, 2, 1, 0.5);
+  background: rgba(130, 2, 1, 0.1);
+  border-color: rgba(130, 2, 1, 0.2);
   transform: translateY(-2px);
 }
 
@@ -400,8 +400,8 @@ body {
 }
 
 .btn-write:hover {
-  background: rgba(130, 2, 1, 0.15);
-  border-color: rgba(130, 2, 1, 0.3);
+  background: rgba(130, 2, 1, 0.1);
+  border-color: rgba(130, 2, 1, 0.2);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(130, 2, 1, 0.3);
 }
@@ -445,7 +445,7 @@ body {
 }
 
 .btn-edit:hover, .btn-del:hover {
-  background: rgba(130, 2, 1, 0.3);
+  background: rgba(130, 2, 1, 0.2);
 }
 
 .btn-edit::before {
@@ -777,8 +777,8 @@ html.zoom .guestbook-subtitle {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: rgba(130, 2, 1, 0.15);
-  border: 2px solid rgba(130, 2, 1, 0.3);
+  background: rgba(130, 2, 1, 0.1);
+  border: 2px solid rgba(130, 2, 1, 0.2);
   color: #820201;
   font-size: 20px;
   cursor: pointer;
@@ -1123,8 +1123,8 @@ html.zoom .guestbook-subtitle {
 }
 
 .account-fold-header:hover {
-  background: rgba(130, 2, 1, 0.15);
-  border-color: rgba(130, 2, 1, 0.3);
+  background: rgba(130, 2, 1, 0.1);
+  border-color: rgba(130, 2, 1, 0.2);
 }
 
 .btn-account-fold::after {
@@ -1189,9 +1189,9 @@ html.zoom .guestbook-subtitle {
 }
 
 .btn-copy {
-  background: #FEFAEF;
+  background: rgba(255, 250, 205, 0.3);
   color: #333;
-  border: 2px solid transparent;
+  border: 1.5px solid rgba(121, 85, 61, 0.25);
   padding: 8px 15px;
   border-radius: 5px;
   transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
@@ -1202,8 +1202,8 @@ html.zoom .guestbook-subtitle {
 }
 
 .btn-copy:hover {
-  background: rgba(130, 2, 1, 0.15);
-  border: 2px solid rgba(130, 2, 1, 0.3);
+  background: rgba(130, 2, 1, 0.1);
+  border: 2px solid rgba(130, 2, 1, 0.2);
   color: #820201;
 }
 
