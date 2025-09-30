@@ -99,19 +99,19 @@ body {
   margin-bottom: 40px;
   position: relative;
 }
-
+ 
 .main-photo img {
-  width: 100%;
+  width: 90%;
   height: auto;
   object-fit: cover;
-  border-radius: 150px;
+  border-radius: 200px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 /* 베이지색 구역 1: 사진 중간부터 웨딩 메시지까지 */
 .beige-section-1 {
   background: #FEFAEF;
-  padding: 40px 0;
+  padding: 0px 0;
   margin: 0;
   margin-top: -1px;
 }
@@ -125,14 +125,14 @@ body {
 .couple-names {
   font-size: 28px;
   margin-bottom: 15px;
-  color: #820201;
+  color: #352700;
   font-weight: normal;
   letter-spacing: 1px;
 }
 
 .couple-parents {
   font-size: 14px;
-  color: #820201;
+  color: #352700;
   line-height: 1.8;
   margin-bottom: 30px;
   opacity: 0.8;
@@ -145,18 +145,18 @@ body {
 /* 웨딩 메시지 */
 .wedding-message {
   padding: 40px 30px;
-  background: rgba(130, 2, 1, 0.05);
+  background: rgba(255, 250, 205, 0.3);
   margin: 0 20px;
   border-radius: 20px;
   text-align: center;
   margin-bottom: 0;
-  border: 2px solid rgba(130, 2, 1, 0.1);
+  border: 1.5px solid rgba(121, 85, 61, 0.25);
 }
 
 .wedding-message p {
   font-size: 16px;
   line-height: 1.8;
-  color: #820201;
+  color: #33270f;
   margin: 0 0 15px;
 }
 
@@ -179,14 +179,14 @@ body {
 }
 
 .wedding-date {
-  font-size: 24px;
+  font-size: 20px;
   color: #333;
   margin-bottom: 10px;
   font-weight: normal;
 }
 
 .wedding-time {
-  font-size: 18px;
+  font-size: 20px;
   color: #820201;
   margin-bottom: 30px;
 }
@@ -517,16 +517,16 @@ body {
 }
 
 .cal-inner {
-  background: rgba(251, 241, 222, 0.8);
+  background: rgba(255, 250, 205, 0.3);
   border-radius: 20px;
   padding: 30px 20px;
   margin-top: 2rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .month {
   font-size: 2rem;
-  color: #820201;
+  color: #33270f;
   margin-bottom: 1rem;
   font-weight: normal;
 }
@@ -542,13 +542,13 @@ body {
   height: 3.5rem;
   font-size: 1.4rem;
   font-weight: 600;
-  color: #820201;
+  color: #33270f;
 }
 
 .tbl-cal td {
   height: 3.8rem;
   font-size: 1.4rem;
-  color: #820201;
+  color: #33270f;
   position: relative;
   vertical-align: middle;
 }
@@ -1585,7 +1585,7 @@ body.popup-open {
 
 /* 에러 메시지 */
 .err-msg {
-  color: #e74c3c;
+  color: #352700;
   font-size: 14px;
   margin-top: 5px;
   margin-bottom: 0;
@@ -1599,7 +1599,7 @@ body.popup-open {
 /* 방명록 제목 */
 .guestbook-subtitle {
   text-align: center;
-  color: #820201;
+  color: #352700;
   font-size: 16px;
   margin-bottom: 20px;
   line-height: 1.6;
