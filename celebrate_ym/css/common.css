@@ -279,8 +279,8 @@ body {
   display: block;
   width: 100%;
   padding: 15px;
-  background: rgba(130, 2, 1, 0.2);
-  border: 2px solid rgba(130, 2, 1, 0.3);
+  background: rgba(255, 250, 205, 0.3);
+  border: 1.5px solid rgba(121, 85, 61, 0.25);
   border-radius: 25px;
   color: #820201;
   font-size: 16px;
@@ -418,11 +418,11 @@ body {
 }
 
 .card-box {
-  background: rgba(130, 2, 1, 0.1);
+  background: rgba(255, 250, 205, 0.3);
+  border: 1.5px solid rgba(121, 85, 61, 0.25);
   border-radius: 15px;
   padding: 20px;
   position: relative;
-  border: 2px solid rgba(130, 2, 1, 0.2);
 }
 
 .card-actions {
@@ -831,13 +831,13 @@ html.zoom .guestbook-subtitle {
 }
 
 .location-info {
-  background: rgba(130, 2, 1, 0.05);
+  background: rgba(255, 250, 205, 0.3);
   padding: 20px;
   border-radius: 15px;
   margin-bottom: 20px;
   color: #333;
   line-height: 1.6;
-  border: 2px solid rgba(130, 2, 1, 0.1);
+  border: 1.5px solid rgba(121, 85, 61, 0.25);
 }
 
 .how-to-go {
@@ -1098,12 +1098,12 @@ html.zoom .guestbook-subtitle {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background: rgba(130, 2, 1, 0.1);
+  background: rgba(255, 250, 205, 0.3);
   color: #820201;
   cursor: pointer;
   position: relative;
   z-index: 10;
-  border: 2px solid rgba(130, 2, 1, 0.2);
+  border: 1.5px solid rgba(121, 85, 61, 0.25);
   border-radius: 10px;
   transition: background 0.3s ease, border-color 0.3s ease;
 }
@@ -1155,7 +1155,8 @@ html.zoom .guestbook-subtitle {
   grid-template-columns: 1fr 2fr auto;
   align-items: center;
   padding: 15px;
-  background: rgba(130, 2, 1, 0.05);
+  background: rgba(255, 250, 205, 0.3);
+  border: 1.5px solid rgba(121, 85, 61, 0.25);
   border-radius: 10px;
   margin-bottom: 10px;
   gap: 10px;
@@ -1559,9 +1560,9 @@ body.popup-open {
 .btn-comment {
   width: 100%;
   padding: 15px;
-  background: rgba(130, 2, 1, 0.1);
+  background: rgba(255, 250, 205, 0.3);
   color: #820201;
-  border: 2px solid rgba(130, 2, 1, 0.2);
+  border: 1.5px solid rgba(121, 85, 61, 0.25);
   border-radius: 25px;
   font-size: 16px;
   font-weight: bold;
