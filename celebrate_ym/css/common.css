@@ -20,12 +20,12 @@ html, body {
   width: 100%;
   min-height: 100vh;
   font-family: 'Cafe24Oneprettynight', 'Pretendard', sans-serif;
-  background: #FEFAEF;
+  background: #fff8eb;
   color: #333;
 }
 
 body {
-  background: #FEFAEF;
+  background: #fff8eb;
 }
 
 /* Wrapper 구조 */
@@ -33,7 +33,7 @@ body {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  background-color: #FEFAEF;
+  background-color: #fff8eb;
 }
 
 .container {
@@ -50,7 +50,7 @@ body {
 .wedding-container {
   max-width: 500px;
   margin: 0 auto;
-  background: #FEFAEF;
+  background: #fff8eb;
   position: relative;
   min-height: 100vh;
   display: block;
@@ -59,8 +59,8 @@ body {
 
 /* 빨간색 구역 1: 헤더 + 메인사진 절반 */
 .red-section-1 {
-  background: #FEFAEF;
-  padding-bottom: 40px;
+  background: #fff8eb;
+  padding-bottom: 15px;
   margin: 0;
   display: block;
   visibility: visible;
@@ -86,8 +86,8 @@ body {
 }
 
 .wedding-header .subtitle {
-  font-size: 16px;
-  color: #820201;
+  font-size: 18px;
+  color: #c2a382;
   margin-bottom: 30px;
   line-height: 1.6;
 }
@@ -96,7 +96,7 @@ body {
 .main-photo {
   width: 100%;
   padding: 0 30px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   position: relative;
 }
  
@@ -110,8 +110,8 @@ body {
 
 /* 베이지색 구역 1: 사진 중간부터 웨딩 메시지까지 */
 .beige-section-1 {
-  background: #FEFAEF;
-  padding: 0px 0;
+  background: #fff8eb;
+  padding: 50px 0;
   margin: 0;
   margin-top: -1px;
 }
@@ -124,17 +124,19 @@ body {
 
 .couple-names {
   font-size: 28px;
+  padding top: 20px;
   margin-bottom: 15px;
-  color: #352700;
+  color: #2c2c2c;
   font-weight: normal;
   letter-spacing: 1px;
 }
 
 .couple-parents {
-  font-size: 14px;
-  color: #352700;
-  line-height: 1.8;
-  margin-bottom: 30px;
+  font-size: 16px;
+  color: #2c2c2c;
+  padding: 20px;
+  line-height: 0.9;
+/*  margin-bottom: 20px;*/
   opacity: 0.8;
 }
 
@@ -144,13 +146,13 @@ body {
 
 /* 웨딩 메시지 */
 .wedding-message {
-  padding: 40px 30px;
-  background: rgba(255, 250, 205, 0.3);
+  padding: 60px 30px;
+  background: rgba(245, 235, 220, 0.5);
   margin: 0 20px;
   border-radius: 20px;
   text-align: center;
   margin-bottom: 0;
-  border: 1.5px solid rgba(121, 85, 61, 0.25);
+  border: 1.5px solid rgba(181, 140, 99, 0.3);
 }
 
 .wedding-message p {
@@ -164,11 +166,11 @@ body {
   margin-bottom: 0;
 }
 
-/* 빨간색 구역 2: 날짜 및 시간 */
+/* 빨간색 구역 2: 날짜  및 시간 */
 .red-section-2 {
-  background: #FEFAEF;
-  padding: 40px 0;
-  margin: 0;
+  background: #fff8eb;
+  padding: 30px 0;
+  margin-bottom : 40px;
   margin-top: -1px;
 }
 
@@ -199,7 +201,7 @@ body {
 
 /* 베이지색 구역 2: 사진 갤러리 */
 .beige-section-2 {
-  background: #FEFAEF;
+  background: #fff8eb;
   padding: 40px 0;
   margin: 0;
   margin-top: -1px;
@@ -213,13 +215,14 @@ body {
 .gallery-title {
   text-align: center;
   font-size: 24px;
-  color: #820201;
+  color: #c2a382;
   margin-bottom: 30px;
   font-weight: normal;
 }
 
 .photo-grid {
   display: grid;
+  padding: 30px 20px;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   margin-bottom: 30px;
@@ -279,10 +282,10 @@ body {
   display: block;
   width: 100%;
   padding: 15px;
-  background: rgba(255, 250, 205, 0.3);
+  background: rgba(251, 241, 222, 0.8);
   border: 1.5px solid rgba(121, 85, 61, 0.25);
   border-radius: 25px;
-  color: #820201;
+  color: #c2a382;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -290,11 +293,11 @@ body {
   text-align: center;
   position: relative;
   z-index: 10;
-}
+} 
 
 .btn-more:hover {
-  background: rgba(130, 2, 1, 0.1);
-  border-color: rgba(130, 2, 1, 0.2);
+  background: rgba(194, 163, 130, 0.3);
+  border-color: rgba(194, 163, 130, 0.5);
   transform: translateY(-2px);
 }
 
@@ -312,8 +315,8 @@ body {
 
 /* 빨간색 구역 3: 지도 영역 */
 .red-section-3 {
-  background: #FEFAEF;
-  padding: 40px 0;
+  background: #fff8eb;
+  padding: 100px 0;
   margin: 0;
   margin-top: -1px;
 }
@@ -326,13 +329,21 @@ body {
 .map-title {
   text-align: center;
   font-size: 24px;
-  color: #333;
-  margin-bottom: 20px;
+  color: #c2a382;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.map-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #2c2c2c;
+  margin-bottom: 30px;
   font-weight: normal;
 }
 
 .map-container {
-  background: #FEFAEF;
+  background: #fff8eb;
   border-radius: 15px;
   overflow: hidden;
   margin-bottom: 20px;
@@ -354,15 +365,15 @@ body {
 
 /* 베이지색 구역 3: 식사 정보 */
 .beige-section-3 {
-  background: #FEFAEF;
-  padding: 40px 0;
+  background: #fff8eb;
+  padding: 100px 0;
   margin: 0;
   margin-top: -1px;
 }
 
 /* 베이지색 구역 4: 방명록 */
 .beige-section-4 {
-  background: #FEFAEF;
+  background: #fff8eb;
   margin: 0;
   margin-top: -1px;
 }
@@ -375,7 +386,7 @@ body {
 .guestbook-title {
   text-align: center;
   font-size: 24px;
-  color: #820201;
+  color: #c2a382;
   margin-top: 30px;
   margin-bottom: 30px;
   font-weight: normal;
@@ -418,8 +429,8 @@ body {
 }
 
 .card-box {
-  background: rgba(255, 250, 205, 0.3);
-  border: 1.5px solid rgba(121, 85, 61, 0.25);
+  background: rgba(245, 235, 220, 0.5);
+  border: 1.5px solid rgba(181, 140, 99, 0.3);
   border-radius: 15px;
   padding: 20px;
   position: relative;
@@ -461,7 +472,7 @@ body {
 .card-box .desc {
   font-size: 16px;
   line-height: 1.6;
-  color: #820201;
+  color: #c2a382;
   margin-bottom: 15px;
   padding-right: 80px;
   text-align: left;
@@ -481,7 +492,7 @@ body {
 
 /* 빨간색 구역 4: 푸터 */
 .red-section-4 {
-  background: #FEFAEF;
+  background: #fff8eb;
   padding: 40px 0 60px;
   margin: 0;
   margin-top: -1px;
@@ -498,8 +509,8 @@ body {
 
 /* 달력 영역 */
 .red-section-calendar {
-  background: #FEFAEF;
-  padding: 40px 0;
+  background: #fff8eb;
+  padding: 100px 0;
   margin: 0;
   margin-top: -1px;
 }
@@ -511,17 +522,17 @@ body {
 
 .calendar-title {
   font-size: 24px;
-  color: #333;
+  color: #c2a382;
   margin-bottom: 30px;
   font-weight: normal;
 }
 
 .cal-inner {
-  background: rgba(255, 250, 205, 0.3);
+/*  background: rgba(245, 235, 220, 0.5);*/
   border-radius: 20px;
   padding: 30px 20px;
   margin-top: 2rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+/*  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);*/
 }
 
 .month {
@@ -697,6 +708,10 @@ html.zoom .map-title {
   font-size: 30px;
 }
 
+html.zoom .map-subtitle {
+  font-size: 22px;
+}
+
 html.zoom .location-info {
   font-size: 20px;
   line-height: 1.4;
@@ -777,9 +792,9 @@ html.zoom .guestbook-subtitle {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: rgba(130, 2, 1, 0.1);
-  border: 2px solid rgba(130, 2, 1, 0.2);
-  color: #820201;
+  background: rgba(251, 241, 222, 0.8);
+  border: 2px solid rgba(121, 85, 61, 0.25);
+  color: #c2a382;
   font-size: 20px;
   cursor: pointer;
   z-index: 1001;
@@ -793,8 +808,8 @@ html.zoom .guestbook-subtitle {
 }
 
 .btn-top:hover {
-  background: rgba(130, 2, 1, 0.25);
-  border-color: rgba(130, 2, 1, 0.5);
+  background: rgba(194, 163, 130, 0.3);
+  border-color: rgba(194, 163, 130, 0.5);
   transform: translateY(-2px);
 }
 
@@ -810,7 +825,14 @@ html.zoom .guestbook-subtitle {
 
 .map-title {
   font-size: 24px;
-  color: #333;
+  color: #c2a382;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.map-subtitle {
+  font-size: 18px;
+  color: #2c2c2c;
   margin-bottom: 30px;
   font-weight: normal;
 }
@@ -825,19 +847,19 @@ html.zoom .guestbook-subtitle {
 
 .map-image {
   width: 100%;
-  height: auto;
+  height: auto; 
   display: block;
   max-width: 100%;
 }
 
 .location-info {
-  background: rgba(255, 250, 205, 0.3);
+  background: rgba(251, 241, 222, 0.8);
   padding: 20px;
   border-radius: 15px;
   margin-bottom: 20px;
   color: #333;
   line-height: 1.6;
-  border: 1.5px solid rgba(121, 85, 61, 0.25);
+  border: 1.5px solid rgba(181, 140, 99, 0.3);
 }
 
 .how-to-go {
@@ -847,11 +869,8 @@ html.zoom .guestbook-subtitle {
 }
 
 .transport-item {
-  background: rgba(130, 2, 1, 0.05);
   padding: 15px;
-  border-radius: 10px;
   text-align: left;
-  border: 2px solid rgba(130, 2, 1, 0.1);
 }
 
 .transport-title {
@@ -879,9 +898,11 @@ html.zoom .guestbook-subtitle {
 
 .transport-item p {
   margin: 5px 0;
-  color: #333;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 1.4;
+  color: #c2a382;
+  margin-bottom: 10px;
+  font-weight: normal;
 }
 
 /* blind 클래스 */
@@ -968,51 +989,54 @@ html.zoom .guestbook-subtitle {
 }
 
 .transport-item {
-  background: rgba(251, 241, 222, 0.8);
   padding: 20px;
-  border-radius: 15px;
-  text-align: center;
+  text-align: left;
+  border-bottom: 1px dashed rgba(130, 2, 1, 0.3);
 }
 
 .transport-title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 15px;
   color: #333;
   padding: 10px 0;
-  border-bottom: 1px dashed rgba(130, 2, 1, 0.3);
   position: relative;
 }
 
 .transport-title::before {
-  content: '';
   display: inline-block;
   width: 1.8rem;
   height: 1.8rem;
   margin: 0 0.7rem 0 0;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 .transport-title.subway::before {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666'%3E%3Cpath d='M17.8 2.8C16 2.3 13.03 2 12 2c-1.03 0-4 .3-5.8.8C5.7 3 5 3.9 5 5v10.5c0 1.5 1.5 3.5 3.5 3.5.5 0 1-.5 1-1H14.5c0 .5.5 1 1 1 2 0 3.5-2 3.5-3.5V5c0-1.1-.7-2-1.2-2.2zM7.5 6c0-.8.7-1.5 1.5-1.5s1.5.7 1.5 1.5S9.8 7.5 9 7.5 7.5 6.8 7.5 6zm7.5 0c0-.8.7-1.5 1.5-1.5S18 5.2 18 6s-.7 1.5-1.5 1.5S15 6.8 15 6zm-3 7.5H12L8.5 15h7z'/%3E%3C/svg%3E") no-repeat center / contain;
+  content: '';
+  background: url("../img/아이콘_지하철.png") no-repeat center / contain;
 }
 
 .transport-title.bus::before {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666'%3E%3Cpath d='M17 20H7V21a1 1 0 01-2 0v-1H4a2 2 0 01-2-2V6c0-3.5 3.5-4 8-4s8 .5 8 4v12c0 1.1-.9 2-2 2h-1v1a1 1 0 01-2 0v-1zM4 11h16V6c0-1.5-2.5-2-8-2S4 4.5 4 6v5zm2 5.5c0 .8.7 1.5 1.5 1.5S9 17.3 9 16.5 8.3 15 7.5 15 6 15.7 6 16.5zm10 0c0 .8.7 1.5 1.5 1.5s1.5-.7 1.5-1.5-.7-1.5-1.5-1.5-1.5.7-1.5 1.5z'/%3E%3C/svg%3E") no-repeat center / contain;
+  content: '';
+  background: url("../img/아이콘_버스.png") no-repeat center / contain;
 }
 
 .transport-title.car::before {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666'%3E%3Cpath d='M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z'/%3E%3C/svg%3E") no-repeat center / contain;
+  content: '';
+  background: url("../img/아이콘_차량대절.png") no-repeat center / contain;
 }
 
 .transport-title.parking::before {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666'%3E%3Cpath d='M13 3H6v18h4v-6h3c3.31 0 6-2.69 6-6s-2.69-6-6-6zm-1 8h-2V7h2c1.1 0 2 .9 2 2s-.9 2-2 2z'/%3E%3C/svg%3E") no-repeat center / contain;
+  content: '';
+  background: url("../img/아이콘_주차안내.png") no-repeat center / contain;
 }
 
 .transport-item p:not(.transport-title) {
   color: #333;
   line-height: 1.4;
+  font-size: 17px;
   margin: 5px 0;
+  margin-left: 2.5rem;
 }
 
 /* 식사 정보 스타일 */
@@ -1023,14 +1047,14 @@ html.zoom .guestbook-subtitle {
 
 .meal-title {
   font-size: 24px;
-  color: #820201;
+  color: #c2a382;
   margin-bottom: 10px;
   font-weight: normal;
 }
 
 .meal-subtitle {
   font-size: 18px;
-  color: #820201;
+  color: #2c2c2c;
   margin-bottom: 30px;
   font-weight: normal;
 }
@@ -1047,15 +1071,15 @@ html.zoom .guestbook-subtitle {
 }
 
 .meal-description {
-  color: #820201;
+  color: #2c2c2c;
   line-height: 1.6;
   font-size: 16px;
 }
 
 /* 빨간색 구역 5: 계좌 정보 */
 .red-section-5 {
-  background: #FEFAEF;
-  padding: 40px 0;
+  background: #fff8eb;
+  padding: 100px 0;
   margin: 0;
   margin-top: -1px;
 }
@@ -1068,7 +1092,7 @@ html.zoom .guestbook-subtitle {
 
 .account-title {
   font-size: 24px;
-  color: #333;
+  color: #c2a382;
   margin-bottom: 10px;
   font-weight: normal;
 }
@@ -1083,7 +1107,7 @@ html.zoom .guestbook-subtitle {
 .account-description {
   color: #333;
   line-height: 1.6;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   font-size: 16px;
 }
 
@@ -1098,8 +1122,8 @@ html.zoom .guestbook-subtitle {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background: rgba(255, 250, 205, 0.3);
-  color: #820201;
+  background: rgba(251, 241, 222, 0.8);
+  color: #c2a382;
   cursor: pointer;
   position: relative;
   z-index: 10;
@@ -1117,14 +1141,14 @@ html.zoom .guestbook-subtitle {
 .btn-account-fold {
   background: none;
   border: none;
-  color: #820201;
+  color: #c2a382;
   cursor: pointer;
   font-size: 20px;
 }
 
 .account-fold-header:hover {
-  background: rgba(130, 2, 1, 0.1);
-  border-color: rgba(130, 2, 1, 0.2);
+  background: rgba(194, 163, 130, 0.3);
+  border-color: rgba(194, 163, 130, 0.5);
 }
 
 .btn-account-fold::after {
@@ -1141,7 +1165,7 @@ html.zoom .guestbook-subtitle {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease, padding 0.3s ease;
-  background: #FEFAEF;
+  background: #fff8eb;
   border-radius: 0 0 10px 10px;
 }
 
@@ -1155,8 +1179,8 @@ html.zoom .guestbook-subtitle {
   grid-template-columns: 1fr 2fr auto;
   align-items: center;
   padding: 15px;
-  background: rgba(255, 250, 205, 0.3);
-  border: 1.5px solid rgba(121, 85, 61, 0.25);
+  background: rgba(245, 235, 220, 0.5);
+  border: 1.5px solid rgba(181, 140, 99, 0.3);
   border-radius: 10px;
   margin-bottom: 10px;
   gap: 10px;
@@ -1175,7 +1199,7 @@ html.zoom .guestbook-subtitle {
 
 .account-box p {
   margin: 0;
-  color: #820201;
+  color: #2c2c2c;
 }
 
 .account-box span {
@@ -1209,7 +1233,7 @@ html.zoom .guestbook-subtitle {
 
 /* 빨간색 구역 6: 푸터 */
 .red-section-6 {
-  background: #FEFAEF;
+  background: #fff8eb;
   padding: 40px 0 40px;
   margin: 0;
   margin-top: -1px;
@@ -1558,26 +1582,28 @@ body.popup-open {
 }
 
 .btn-comment {
+  display: block;
   width: 100%;
   padding: 15px;
-  background: rgba(255, 250, 205, 0.3);
-  color: #820201;
+  background: rgba(251, 241, 222, 0.8);
   border: 1.5px solid rgba(121, 85, 61, 0.25);
   border-radius: 25px;
+  color: #c2a382;
   font-size: 16px;
-  font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
   margin-bottom: 20px;
-  box-shadow: 0 4px 15px rgba(130, 2, 1, 0.3);
+  position: relative;
+  z-index: 10;
 }
 
 .btn-comment:hover {
-  background: rgba(130, 2, 1, 0.15);
-  border-color: rgba(130, 2, 1, 0.3);
+  background: rgba(194, 163, 130, 0.3);
+  border-color: rgba(194, 163, 130, 0.5);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(130, 2, 1, 0.3);
+  box-shadow: 0 6px 20px rgba(194, 163, 130, 0.3);
 }
 
 .btn-comment:active {

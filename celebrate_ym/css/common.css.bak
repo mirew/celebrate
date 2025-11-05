@@ -11,322 +11,1711 @@
 	4. color/font/line-height/text/letter-spacing/vertical-align/white-spacing/word-spacing
 	5. etc
 	6. border/background
-
  */
 
-html{touch-action: manipulation; font-size:62.5%; -moz-text-size-adjust: 100%; /* android에서 Firefox 브라우저 */ -webkit-text-size-adjust: 100%; /* iOS에서 Safari 브라우저 */ text-size-adjust: 100%;} /* rem 기준 폰트 사이즈 */
-body{touch-action: manipulation; position:relative;min-height:100%;font-family:'Cafe24Oneprettynight', sans-serif;;color:#1a1a1a;font-size:1.5rem;font-weight:400;line-height:1.6; letter-spacing: -.05rem;}
-body, object, iframe, h1, h2, h3, h4, h5, h6, div, span, p, blockquote, 
-pre, abbr, acronym, address, cite, code, del, dfn, em, img, figure, ins, 
-kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, 
-form, fieldset, legend, a, textarea, input, select, option, button, label, 
-table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, 
-details, figcaption, figure, footer, header, hgroup, menu, nav, section, 
-summary, time, mark, audio, video{word-break:break-all;font-family:'Cafe24Oneprettynight', sans-serif;;color:#1a1a1a;font-size:1.5rem;font-weight:400;line-height:1.6; letter-spacing: -.05rem; outline: none;}
-button{background-color: transparent; font-size: inherit; font-weight: inherit; color: inherit; text-align: left;}
-button[disabled], button:disabled{cursor: default;}
-button[disabled]:active, button:disabled:active,
-button[disabled]:focus, button:disabled:focus{opacity: 1; cursor: default;}
-input, select{outline: none;}
-table{table-layout: fixed; width: 100%;}
-
-/*  Media Query */
-/* Phone */
-@media only screen and (max-width:359px) {
-	html{font-size:50.5%;} 
+/* 전체 레이아웃 */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Cafe24Oneprettynight', 'Pretendard', sans-serif;
+  background: #fff8eb;
+  color: #333;
 }
 
-/* Tablet */
-@media only screen and (min-width:768px) {
-	html{font-size:62.5%;} /* 임의 조정 */
+body {
+  background: #fff8eb;
 }
 
-html.zoom{font-size: 80%;}
-
-
-/*=== GUIDE TEMPLATE LAYOUT ===*/
-.blind{position: absolute; overflow: hidden; border: 0; width: 1px; height: 1px; clip: rect(1px, 1px, 1px, 1px); -webkit-clip-path: inset(50%); clip-path: inset(50%);}
-body, .wrapper{height: 100%; overflow:hidden;}
-/* body, .wrapper{height: 100%;} */
-.wrapper {width: 100%;height: 100%;position: relative; display: flex; flex-direction: column; background-color: #FBF9F9;}
-/* .wrapper {padding-top:env(safe-area-inset-top);padding-top:constant(safe-area-inset-top); padding-bottom: env(safe-area-inset-top); padding-bottom: constant(safe-area-inset-top);} */
-.wrapper {padding-bottom: env(safe-area-inset-bottom); padding-bottom: constant(safe-area-inset-bottom);}
-
-.container{flex: 1; overflow: hidden; display: flex; flex-direction: column; text-align: center;}
-.container .contnet-wrap{flex: 1;}
-
-.content-wrap {position: relative; overflow-x: hidden; overflow-y: auto; flex: 1; -webkit-overflow-scrolling: touch; }
-
-
-/* toast popup */
-.toast-message{position: fixed; left: 50%; bottom: 3.2rem; display: block; padding: 1.2rem 1.6rem; border-radius: .6rem; background-color: rgba(0, 0, 0, 0.7); font-size: 1.4rem; line-height: 1.8rem; color: #fff; transform: translateX(-50%); bottom:calc(3.2rem + env(safe-area-inset-top)); bottom:calc(3.2rem + constant(safe-area-inset-top)); white-space: nowrap; z-index: 10000;}
-.toast-message.animate{animation: fadeInOut .23s; -webkit-animation: fadeInOut .23s;}
-.toast-message.remove-animate{animation: fadeInOut .23s reverse; -webkit-animation: fadeInOut .23s reverse;}
-.toast-message.overflow{width: calc(100% - 4rem); white-space: initial; word-break: keep-all; text-align: center; z-index: 10000;}
-
-/*===GUIDE POPUP LAYOUT-LAYER===*/
-/* layer popup */
-.popup-wrap{position:fixed;top:0;left:0;z-index:9999;width:100%;height:100%; display: none; opacity: 0;}
-.popup-wrap.active{display: block; animation: fadeInOut .23s forwards; -webkit-animation: fadeInOut .23s forwards;}
-@keyframes fadeInOut {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
-}
-@-webkit-keyframes fadeInOut {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
+/* Wrapper 구조 */
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #fff8eb;
 }
 
-body.pop-open .wrapper{filter: blur(2px)}
-.popup-bg{position:absolute;top:0;left:0;z-index:101;width:100%;height:100%;opacity:.6;}
-.lastest .popup-bg{background:#000; }
-.popup-box{position: relative; display: flex; z-index: 102; width: 100%; height: 100%;}
-.popup-box .popup-mid, .popup-box .popup-btm{display: flex; width: 100%; height: auto;}
-.popup-box .popup-mid{align-items: center; padding-left: 2rem; padding-right: 2rem; vertical-align:middle;}
-.popup-box .popup-mid .popup{background-color: #fff; padding: 3rem 0}
-.popup-box .popup-mid .pop-header{padding: 0 2rem 1rem;}
-.popup-box .popup-mid .pop-header + .pop-body{padding-top: 0;}
-.popup-box .popup-mid .btn-close{top: -1.5rem; right: 1.5rem;}
-.popup-box .popup-mid .btn-close::before, .popup-box .popup-mid .btn-close::after { background: #000;}
-
-
-/* full popup */
-.popup-box .popup-full{display: flex; width: 100%; height: 100%;}
-.popup-box .popup-full .popup{height: 100%; padding-top: 0; border-radius: 0; padding-bottom: calc(1.6rem + env(safe-area-inset-bottom)); padding-bottom: calc(1.6rem + constant(safe-area-inset-bottom));}
-.popup-box .popup-full .pop-header{padding: 0;}
-.popup-box .btn-close{position: absolute; right: 1rem; top: 1rem; display:block; width: 3.2rem; height: 3.2rem; margin-left: auto; background: none !important; border: none; cursor: pointer; z-index: 10;}
-.popup-box .btn-close::before, .popup-box .btn-close::after { content: ''; position: absolute; left: 50%; top: 50%; width: 24px; height: 1px; background: #fff; border-radius: 1px; transform-origin: center;}
-.popup-box .btn-close::before {transform: translate(-50%, -50%) rotate(45deg);}
-.popup-box .btn-close::after {transform: translate(-50%, -50%) rotate(-45deg);}
-.popup-box .popup-full .popup .pop-body{max-height: none; padding: 1.6rem 0 0;}
-.popup-close{position: absolute; top: 0; left: 0; right: 0; bottom: 0;}
-
-@-webkit-keyframes fadeInUp {
-	from {
-		opacity: 0;
-		-webkit-transform: translate3d(0, 100%, 0);
-		transform: translate3d(0, 100%, 0);
-	}
-	to {
-		opacity: 1;
-		-webkit-transform: translate3d(0, 0, 0);
-		transform: translate3d(0, 0, 0);
-	}
-}
-@keyframes fadeInUp {
-	from {
-		opacity: 0;
-		-webkit-transform: translate3d(0, 100%, 0);
-		transform: translate3d(0, 100%, 0);
-	}
-	to {
-		opacity: 1;
-		-webkit-transform: translate3d(0, 0, 0);
-		transform: translate3d(0, 0, 0);
-	}
+.container {
+  width: 100%;
+  text-align: center;
 }
 
-.popup-box .popup{position:relative; width:100%; margin:0 auto; text-align:center; border-radius: 1.2rem; z-index: 999;}
-.popup{display: flex; flex-direction: column; padding: 2.8rem 0 1.6rem;}
+.content-wrap {
+  width: 100%;
+  position: relative;
+}
 
-.popup .pop-header{position: relative; padding: 0 1.6rem 2rem;}
-.popup h2.pop-title{display:block; font-size: 1.8rem; font-weight: 600; text-align: center;}
-.popup .pop-body{flex: 1; position: relative; overflow-y: auto; overflow-x: hidden; max-height: 70vh; padding: 0 2rem; -webkit-overflow-scrolling: touch; text-align: left;}
-.popup .pop-body .pop-title + .pop-desc{margin-top: 1.2rem; font-size: 1.8rem; color : #444;}
-.popup .pop-body .pop-desc{font-size: 1.5rem; line-height: 2rem; word-break: keep-all; text-align: center;}
-.popup .pop-header + .pop-body{padding-top: 1.6rem;}
-.popup .pop-body + .btn-wrap{margin-top: 2rem; padding: 0 1.6rem; border-radius: 0 0 1.2rem 1.2rem;}
+/* 컨테이너 */
+.wedding-container {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fff8eb;
+  position: relative;
+  min-height: 100vh;
+  display: block;
+  visibility: visible;
+}
+
+/* 빨간색 구역 1: 헤더 + 메인사진 절반 */
+.red-section-1 {
+  background: #fff8eb;
+  padding-bottom: 15px;
+  margin: 0;
+  display: block;
+  visibility: visible;
+  min-height: 400px;
+}
+
+/* 헤더 영역 */
+.wedding-header {
+  text-align: center;
+  padding: 60px 30px 40px;
+  position: relative;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.wedding-header h1 {
+  font-size: 32px;
+  font-weight: normal;
+  margin: 0 0 20px;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+.wedding-header .subtitle {
+  font-size: 18px;
+  color: #c2a382;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* 메인 이미지 영역 */
+.main-photo {
+  width: 100%;
+  padding: 0 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+ 
+.main-photo img {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 200px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* 베이지색 구역 1: 사진 중간부터 웨딩 메시지까지 */
+.beige-section-1 {
+  background: #fff8eb;
+  padding: 50px 0;
+  margin: 0;
+  margin-top: -1px;
+}
+
+/* 커플 정보 */
+.couple-info {
+  text-align: center;
+  padding: 0 30px 40px;
+}
+
+.couple-names {
+  font-size: 28px;
+  padding top: 20px;
+  margin-bottom: 15px;
+  color: #2c2c2c;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.couple-parents {
+  font-size: 16px;
+  color: #2c2c2c;
+  padding: 20px;
+  line-height: 0.9;
+/*  margin-bottom: 20px;*/
+  opacity: 0.8;
+}
+
+.couple-parents .parent-info {
+  margin-bottom: 8px;
+}
+
+/* 웨딩 메시지 */
+.wedding-message {
+  padding: 60px 30px;
+  background: rgba(245, 235, 220, 0.5);
+  margin: 0 20px;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 0;
+  border: 1.5px solid rgba(181, 140, 99, 0.3);
+}
+
+.wedding-message p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #33270f;
+  margin: 0 0 15px;
+}
+
+.wedding-message p:last-child {
+  margin-bottom: 0;
+}
+
+/* 빨간색 구역 2: 날짜  및 시간 */
+.red-section-2 {
+  background: #fff8eb;
+  padding: 30px 0;
+  margin-bottom : 40px;
+  margin-top: -1px;
+}
+
+/* 날짜 및 시간 */
+.wedding-datetime {
+  text-align: center;
+  padding: 0 30px;
+}
+
+.wedding-date {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.wedding-time {
+  font-size: 20px;
+  color: #820201;
+  margin-bottom: 30px;
+}
+
+.wedding-location {
+  font-size: 20px;
+  color: #333;
+  font-weight: normal;
+}
+
+/* 베이지색 구역 2: 사진 갤러리 */
+.beige-section-2 {
+  background: #fff8eb;
+  padding: 40px 0;
+  margin: 0;
+  margin-top: -1px;
+}
+
+/* 사진 갤러리 */
+.photo-gallery {
+  padding: 0 30px;
+}
+
+.gallery-title {
+  text-align: center;
+  font-size: 24px;
+  color: #c2a382;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+.photo-grid {
+  display: grid;
+  padding: 30px 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.photo-item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.photo-item:nth-child(n+7) {
+  display: none;
+}
+
+.gallery-list.active .photo-item:nth-child(n+7) {
+  display: block;
+}
+
+.photo-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photo-item:hover img {
+  transform: scale(1.05);
+}
+
+/* 갤러리 아이템 버튼 스타일 */
+.gallery-item {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* 더보기 버튼 */
+.btn-more {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: rgba(251, 241, 222, 0.8);
+  border: 1.5px solid rgba(121, 85, 61, 0.25);
+  border-radius: 25px;
+  color: #c2a382;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+} 
+
+.btn-more:hover {
+  background: rgba(194, 163, 130, 0.3);
+  border-color: rgba(194, 163, 130, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-more:after {
+  content: '▼';
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-list.active + .btn-more:after {
+  transform: rotate(180deg);
+}
+
+/* 빨간색 구역 3: 지도 영역 */
+.red-section-3 {
+  background: #fff8eb;
+  padding: 100px 0;
+  margin: 0;
+  margin-top: -1px;
+}
+
+/* 지도 영역 */
+.wedding-map {
+  padding: 0 30px;
+}
+
+.map-title {
+  text-align: center;
+  font-size: 24px;
+  color: #c2a382;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.map-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #2c2c2c;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+.map-container {
+  background: #fff8eb;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.map-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.location-info {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* 베이지색 구역 3: 식사 정보 */
+.beige-section-3 {
+  background: #fff8eb;
+  padding: 100px 0;
+  margin: 0;
+  margin-top: -1px;
+}
+
+/* 베이지색 구역 4: 방명록 */
+.beige-section-4 {
+  background: #fff8eb;
+  margin: 0;
+  margin-top: -1px;
+}
+
+/* 방명록 영역 */
+.guestbook {
+  padding: 0 30px;
+}
+
+.guestbook-title {
+  text-align: center;
+  font-size: 24px;
+  color: #c2a382;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+.btn-write {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: rgba(130, 2, 1, 0.1);
+  border: 2px solid rgba(130, 2, 1, 0.2);
+  border-radius: 25px;
+  color: #820201;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(130, 2, 1, 0.3);
+}
+
+.btn-write:hover {
+  background: rgba(130, 2, 1, 0.1);
+  border-color: rgba(130, 2, 1, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(130, 2, 1, 0.3);
+}
+
+/* 카드 리스트 */
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-list li {
+  margin-bottom: 20px;
+}
+
+.card-box {
+  background: rgba(245, 235, 220, 0.5);
+  border: 1.5px solid rgba(181, 140, 99, 0.3);
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
+}
+
+.card-actions {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  gap: 8px;
+}
+
+.btn-edit, .btn-del {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(130, 2, 1, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #820201;
+}
+
+.btn-edit:hover, .btn-del:hover {
+  background: rgba(130, 2, 1, 0.2);
+}
+
+.btn-edit::before {
+  content: "✏️";
+  font-size: 12px;
+}
+
+.btn-del::before {
+  content: "🗑️";
+  font-size: 12px;
+}
+
+.card-box .desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #c2a382;
+  margin-bottom: 15px;
+  padding-right: 80px;
+  text-align: left;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: rgba(130, 2, 1, 0.7);
+}
+
+.card-info .name span {
+  color: #820201;
+}
+
+/* 빨간색 구역 4: 푸터 */
+.red-section-4 {
+  background: #fff8eb;
+  padding: 40px 0 60px;
+  margin: 0;
+  margin-top: -1px;
+}
+
+/* 푸터 */
+.wedding-footer {
+  text-align: center;
+  padding: 0 30px;
+  color: #820201;
+  font-size: 16px;
+}
 
 
+/* 달력 영역 */
+.red-section-calendar {
+  background: #fff8eb;
+  padding: 100px 0;
+  margin: 0;
+  margin-top: -1px;
+}
 
-.img-box {position: relative; width: 100%;}
-.img-box img{width: 100%;}
+.calendar-wrap {
+  padding: 0 30px;
+  text-align: center;
+}
 
-.fixed-btn-wrap{position: fixed; top: 2rem; right: 2rem; z-index: 99;}
-.btn-zoom{width: 4rem; height: 4rem; background: #fff url(../img/ico-zoomin.png) center / 2.5rem no-repeat; border: 1px solid #eee; border-radius: 50%; z-index: 999;}
-.btn-zoom.zoomout{background-image: url(../img/ico-zoomout.png);}
-.btn-silent{width: 4rem; height: 4rem; background: #fff url(../img/ico-speak.svg) center / 2.5rem no-repeat; border: 1px solid #eee; border-radius: 50%; z-index: 999;}
-.btn-silent.mute{background-image: url(../img/ico-mute.svg);}
-.wedding-main {position: relative; display: flex; align-items: center; min-height: 66.7rem; height: calc(var(--vh, 1vh) * 100); height: calc(100dvh); padding: 40px;}
-.wedding-main .wedding-inner{position: relative; margin: 0 auto;}
-.wedding-main .title-box{text-align: center;}
-.wedding-main .title-box .txt{font-size: 1rem; display: block; letter-spacing: .2rem}
-.wedding-main .title-box .date{font-size: 1.6rem; margin-top: .5rem; display: block;}
-.wedding-main .img-area{position: relative; margin-top: 2rem;}
-.wedding-main .img-area .man,
-.wedding-main .img-area .woman{position: absolute; top: 50%; transform: translateY(-50%); writing-mode: vertical-lr; display: block; width: 2rem; font-size: 1.5rem;}
-.wedding-main .img-area .man{left: -30px;}
-.wedding-main .img-area .woman{right: -30px;}
-.wedding-main .img-box{border-radius: 999rem 999rem 0 0; overflow: hidden;}
-.wedding-main .img-area + .desc-box{margin-top: 2rem; text-align: center;}
+.calendar-title {
+  font-size: 24px;
+  color: #c2a382;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
 
-.intro-wrap{position: relative; margin: 0 auto; padding-top: 5rem; max-width: 300px; text-align: center;}
-.intro-wrap:before{content: ''; position: absolute; top: 0; left: 50%; display: block; width: 2rem; height: 2rem; background: url(../img/leaf1.jpeg) 0 / 100% no-repeat; transform: translateX(-50%);}
-.intro-wrap p{line-height: 2;}
-.intro-wrap p + p{border-top: 1px solid #f7f2f2;}
+.cal-inner {
+/*  background: rgba(245, 235, 220, 0.5);*/
+  border-radius: 20px;
+  padding: 30px 20px;
+  margin-top: 2rem;
+/*  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);*/
+}
 
-.mtit{margin-bottom: 1.5rem; font-size: 2rem; color: #dab1b6;}
-.stit{padding-bottom: 2rem; margin-bottom: 2.5rem; margin-top: -1.5rem; font-size: 1.6rem; border-bottom: 1px dashed #f5e0e0;}
-.invite-wrap{margin-top: 3rem; padding: 0 2rem;}
-.invite-wrap p{line-height: 2;}
-.invite-wrap p + .name-box{margin-top: 4rem;}
-.invite-wrap .name-box{margin-top: 1rem; font-size: 2rem; line-height: 1.4;}
-.invite-wrap .name-box span{font-size: 1.2rem; vertical-align: 0;}
+.month {
+  font-size: 2rem;
+  color: #33270f;
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
 
-.img-box.type-card{width: calc(100% - 100px); margin: 7rem 50px 0; border-radius: 1.2rem; overflow: hidden;}
+.tbl-cal {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  text-align: center;
+}
 
-.marry-wrap{margin-top: 7rem; padding: 0 30px;}
-.marry-wrap .img-box{border-radius: 1.2rem; overflow: hidden;}
-.marry-wrap .item-wrap{display: flex; gap: 1rem; margin-top: 2rem;}
-.marry-wrap .item-wrap .item{flex: 1;}
-.marry-wrap .item-wrap .item p{line-height: 1.8;}
-.marry-wrap .item-wrap .item + .item .tit{color: rgb(208, 140, 149)}
-.marry-wrap .item-wrap .tit{color: rgb(54, 128, 186)}
+.tbl-cal th {
+  height: 3.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #33270f;
+}
 
-.calendar-wrap{margin-top: 7rem; padding: 0 30px;}
-.calendar-wrap p span{color: #d08c95;}
+.tbl-cal td {
+  height: 3.8rem;
+  font-size: 1.4rem;
+  color: #33270f;
+  position: relative;
+  vertical-align: middle;
+}
 
-/* 캘린더 스타일 */
-.calendar-wrap .cal-inner{margin-top: 2rem;}
-.calendar-wrap .cal-inner .month{margin-bottom: 1rem; font-size: 2rem; color: #000;}
-.calendar-wrap .tbl-cal{width: 100%; border-collapse: collapse; text-align: center;}
-.calendar-wrap .tbl-cal th{height: 4rem; font-size: 1.4rem; font-weight: 600; color: #000;}
-.calendar-wrap .tbl-cal td{height: 4.5rem; font-size: 1.4rem; color: #666; border-bottom: 1px solid #f9f9f9;}
-.calendar-wrap .tbl-cal td:first-child{color: #ff6b6b;}
-.calendar-wrap .tbl-cal td:last-child{color: #4e5dcd;}
-.calendar-wrap .tbl-cal .wedding-day{position: relative;}
-.calendar-wrap .tbl-cal .wedding-day span{display: inline-block; position: relative; z-index: 2; color: #fff; font-weight: 600;}
-.calendar-wrap .tbl-cal .wedding-day::before{content: "♥"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 5rem; color: #d08c95; z-index: 1;}
-.calendar-wrap .tbl-cal .wedding-day::after{content: "오후 6시 40분"; position: absolute; bottom: -1.5rem; left: 50%; transform: translateX(-50%); font-size: 1.2rem; color: #d08c95; font-weight: 600; white-space: nowrap; z-index: 3;}
+.tbl-cal td:first-child {
+  color: #ff6b6b;
+}
 
-.gallery-wrap{margin-top: 5rem; padding: 4rem 20px; background-color: #fbf5f5;}
-.gallery-wrap .gallery-inner{margin-top: 2rem;}
-.gallery-wrap .gallery-list{display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;}
-.gallery-wrap .gallery-list li{overflow: hidden; width: calc((100% - 2rem) / 3); border-radius: .8rem;}
-.gallery-wrap .gallery-list li:nth-child(n+10){display: none;}
-.gallery-wrap .gallery-list.active li:nth-child(n+10){display: block;}
-.gallery-wrap .gallery-item{width: 100%; height: 100%; border: none; background: none; padding: 0; cursor: pointer; border-radius: 1.2rem; overflow: hidden;}
-.gallery-wrap .gallery-item img{width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;}
-.gallery-wrap .btn-more{display: block; width: 100%;  text-align: center;}
-.gallery-wrap .btn-more:after{content: ''; display: inline-block; width: 1.5rem; height: 1.5rem; margin: .4rem 0 0 .5rem; background: url(../img/ico-arr.svg) 0 / 100% no-repeat; vertical-align: top;}
-.gallery-wrap .gallery-list.active + .btn-more:after{transform: rotate(180deg);}
+.tbl-cal td:last-child {
+  color: #4e5dcd;
+}
 
-.location-wrap{margin-top: 7rem; padding: 0 30px;}
-.location-wrap .address-box{position: relative;}
-.location-wrap .address-box p{line-height: 1.8;}
-.location-wrap .address-box .btn-copy{margin-top: 1rem;}
-.location-wrap .how-to-go{margin-top: 5rem; text-align: left;}
-.location-wrap .how-to-go p{line-height: 1.8;}
-.location-wrap .how-to-go .item + .item{margin-top: 4rem;}
-.location-wrap .how-to-go .item .tit{padding-bottom: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px dashed #f5e0e0; font-size: 1.8rem; line-height: 1;}
-.location-wrap .how-to-go .item .tit:before{content: ''; display: inline-block; width: 1.8rem; height: 1.8rem; margin: 0 .7rem 0 0; background: url(../img/ico-subway.svg) 0 / 100% no-repeat; vertical-align: top;}
-.location-wrap .how-to-go .item .tit.map:before{background: url(../img/ico-map.png) 0 / 100% no-repeat;}
-.location-wrap .how-to-go .item .tit.bus:before{background: url(../img/ico-bus.svg) 0 / 100% no-repeat;}
-.location-wrap .how-to-go .item .tit.car:before{background: url(../img/ico-car.svg) 0 / 100% no-repeat;}
-.location-wrap .how-to-go .item .tit.parking:before{background: url(../img/ico-p.svg) 0 / 100% no-repeat;}
-.location-wrap .how-to-go .item .img-box{border-radius: 1.2rem; overflow: hidden;}
+.tbl-cal .wedding-day {
+  position: relative;
+}
 
-/* 지도 영역 스타일 */
-.location-wrap .map-box{margin-top: 2rem; }
-.location-wrap .map-box #map{border-radius: .8rem; overflow: hidden;}
-.location-wrap .map-box .map-buttons{display: flex; gap: 1rem; padding: 1.5rem 2rem; background-color: #fbf9f9;}
-.location-wrap .map-box .btn-map{flex: 1; display: flex; align-items: center; justify-content: center; padding: 1.2rem 1rem; border-radius: 0.8rem; text-decoration: none; font-size: 1.3rem; font-weight: 500; transition: all 0.3s ease;}
-.location-wrap .map-box .btn-map.kakao{background-color: #fee500; color: #000;}
-.location-wrap .map-box .btn-map.kakao:hover{background-color: #fdd835;}
-.location-wrap .map-box .btn-map.tmap{background-color: #0066ff; color: #fff;}
-.location-wrap .map-box .btn-map.tmap:hover{background-color: #0052cc;}
-.location-wrap .map-box .btn-map .ico{display: inline-block; width: 1.6rem; height: 1.6rem; margin-right: 0.8rem; background-size: contain; background-repeat: no-repeat; background-position: center;}
-.location-wrap .map-box .btn-map.kakao .ico{background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E");}
-.location-wrap .map-box .btn-map.tmap .ico{background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E");}
+.tbl-cal .wedding-day span {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  color: #333;
+  font-weight: 600;
+}
 
-.sub-info-wrap{margin-top: 7rem; padding: 0 30px;}
-.sub-info-wrap .img-box{border-radius: 1.2rem; overflow: hidden;}
-.sub-info-wrap .desc{margin-top: 2rem; line-height: 1.8;}
+.tbl-cal .wedding-day::before {
+  content: "♥";
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: #d08c95;
+  z-index: 1;
+}
 
-.account-wrap{margin-top: 5rem; padding: 4rem 30px; background-color: #fbf5f5;}
-.account-wrap .desc{margin-bottom: 3rem;}
-.account-wrap .fold-box{margin-top: 2rem; background-color: #fff; border-radius: 1.2rem; padding: 1rem 2rem 1rem;}
-.account-wrap .fold-box .fold-header{position: relative; text-align: left;}
-.account-wrap .fold-box .fold-header p{font-size: 1.8rem; line-height: 3rem;}
-.account-wrap .fold-box .fold-header button{position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-.account-wrap .fold-box .fold-header button:after{content: ''; position: absolute; right: 0; top: .5rem; display: inline-block; width: 2rem; height: 2rem; background: url(../img/ico-arr.svg) 0 / 100% no-repeat; vertical-align: top;}
-.account-wrap .fold-box .fold-cont{display: none; }
-.account-wrap .fold-box.active .fold-cont{display: block; animation: foldCont .3s forwards;}
+.tbl-cal .wedding-day::after {
+  content: "오후 4시 40분";
+  position: absolute;
+  bottom: -1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  color: #d08c95;
+  font-weight: 600;
+  white-space: nowrap;
+  z-index: 3;
+}
 
-@keyframes foldCont {
-  0% {
-    /* opacity: 0; max-height: 0; overflow: hidden; padding: 0; border-top: 1px solid transparent; margin-top: 0; */
-  }
-  100%{
-    opacity: 1; padding: 1rem 0; margin-top: 1rem; border-top: 1px solid #f5e0e0;
+/* 고정 버튼들 */
+.fixed-btn-wrap {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 확대 버튼 */
+.btn-zoom {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9) url(../img/ico-zoomin.png) center / 60% no-repeat;
+  border: 1px solid rgba(130, 2, 1, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-zoom:hover {
+  background: rgba(255, 255, 255, 1) url(../img/ico-zoomin.png) center / 60% no-repeat;
+  transform: scale(1.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.btn-zoom.zoomout {
+  background-image: url(../img/ico-zoomout.png);
+}
+
+.btn-zoom.zoomout:hover {
+  background: rgba(255, 255, 255, 1) url(../img/ico-zoomout.png) center / 60% no-repeat;
+}
+
+/* 전체 확대 효과 */
+html.zoom {
+  font-size: 140%;
+}
+
+html.zoom .wedding-header h1 {
+  font-size: 30px;
+}
+
+html.zoom .wedding-header .subtitle {
+  font-size: 24px;
+}
+
+html.zoom .couple-names {
+  font-size: 30px;
+}
+
+html.zoom .couple-parents {
+  font-size: 18px;
+}
+
+html.zoom .couple-parents .parent-info {
+  font-size: 18px;
+}
+
+html.zoom .wedding-message p {
+  font-size: 22px;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+html.zoom .wedding-date {
+  font-size: 30px;
+}
+
+html.zoom .wedding-time {
+  font-size: 28px;
+}
+
+html.zoom .cal-inner {
+  padding: 30px 15px 40px;
+}
+
+html.zoom .tbl-cal .wedding-day::after {
+  font-size: 0.8rem;
+  bottom: -0.8rem;
+  white-space: nowrap;
+  right: 0;
+  left: auto;
+  transform: none;
+}
+
+html.zoom .wedding-location {
+  font-size: 22px;
+}
+
+html.zoom .gallery-title {
+  font-size: 30px;
+}
+
+html.zoom .map-title {
+  font-size: 30px;
+}
+
+html.zoom .map-subtitle {
+  font-size: 22px;
+}
+
+html.zoom .location-info {
+  font-size: 20px;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+
+html.zoom .how-to-go .transport-item {
+  font-size: 18px;
+}
+
+html.zoom .how-to-go .transport-title {
+  font-size: 20px;
+}
+
+html.zoom .how-to-go .transport-item p {
+  font-size: 18px;
+}
+
+html.zoom .meal-title {
+  font-size: 30px;
+}
+
+html.zoom .meal-description {
+  font-size: 20px;
+}
+
+html.zoom .account-title {
+  font-size: 30px;
+}
+
+html.zoom .account-description {
+  font-size: 20px;
+}
+
+html.zoom .account-box p {
+  font-size: 18px;
+}
+
+html.zoom .guestbook-title {
+  font-size: 30px;
+}
+
+html.zoom .guestbook-subtitle {
+  font-size: 20px;
+}
+
+.btn-silent {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #333;
+  font-size: 20px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.btn-silent:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.btn-silent.mute::before {
+  content: "🔇";
+}
+
+.btn-silent:not(.mute)::before {
+  content: "🔊";
+}
+
+/* 맨 위로 버튼 */
+.btn-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(251, 241, 222, 0.8);
+  border: 2px solid rgba(121, 85, 61, 0.25);
+  color: #c2a382;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1001;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.btn-top.active {
+  opacity: 1;
+}
+
+.btn-top:hover {
+  background: rgba(194, 163, 130, 0.3);
+  border-color: rgba(194, 163, 130, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-top::before {
+  content: "↑";
+}
+
+/* 지도 영역 */
+.wedding-map {
+  padding: 0 30px;
+  text-align: center;
+}
+
+.map-title {
+  font-size: 24px;
+  color: #c2a382;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.map-subtitle {
+  font-size: 18px;
+  color: #2c2c2c;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+.map-container {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.map-image {
+  width: 100%;
+  height: auto; 
+  display: block;
+  max-width: 100%;
+}
+
+.location-info {
+  background: rgba(251, 241, 222, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  color: #333;
+  line-height: 1.6;
+  border: 1.5px solid rgba(181, 140, 99, 0.3);
+}
+
+.how-to-go {
+  display: grid;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.transport-item {
+  padding: 15px;
+  text-align: left;
+}
+
+.transport-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #820201;
+  font-size: 16px;
+}
+
+.transport-title.subway::before {
+  content: "🚇 ";
+}
+
+.transport-title.bus::before {
+  content: "🚌 ";
+}
+
+.transport-title.car::before {
+  content: "🚗 ";
+}
+
+.transport-title.parking::before {
+  content: "🅿️ ";
+}
+
+.transport-item p {
+  margin: 5px 0;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #c2a382;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+/* blind 클래스 */
+.blind {
+  position: absolute;
+  overflow: hidden;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+}
+
+/* 반응형 */
+@media (max-width: 480px) {
+  .wedding-header {
+    padding: 40px 20px 30px;
   }
   
-}
-.account-wrap .fold-box .fold-cont .account-box{position: relative;}
-.account-wrap .fold-box .fold-cont .account-box + .account-box{margin-top: 1rem;}
-.account-wrap .fold-box .fold-cont .account-box p{font-size: 1.2rem; text-align: left; color: #858e96;}
-.account-wrap .fold-box .fold-cont .account-box p span{padding-left: .5rem; font-size: 1.6rem; vertical-align: 0;}
-.account-wrap .fold-box .fold-cont .account-box .account-num{margin-top: .5rem; font-size: 1.6rem; color: #000}
-.account-wrap .fold-box .fold-cont .account-box .btn-copy{position: absolute; bottom: 0; right: 0;}
-
-.btn-copy{display: inline-block; height: 2.8rem; line-height: 1; border-radius: .6rem; padding: .6rem .8rem; background-color: #fff; border: 1px solid #eee;}
-.btn-copy:after{content: ''; display: inline-block; width: 1rem; height: 1rem; margin: .2rem 0 0 .3rem; background: url(../img/ico-copy.svg) 0 / 100% no-repeat; vertical-align: top;}
-
-.copyright{margin-top: 5rem; font-size: 1.3rem; color: #858e96;}
-
-.gallery-swiper{position: relative; width: 100%; height: 100%;}
-.swiper{height: 100%;}
-.swiper .swiper-slide{height: auto;}
-.swiper .swiper-slide .img-box{display: flex; align-items: center; justify-content: center; height: 100%;}
-.swiper .swiper-pagination-fraction{color: #fff;}
-.swiper .swiper-pagination-fraction .swiper-pagination-current,
-.swiper .swiper-pagination-fraction .swiper-pagination-total{color: #fff;}
-.swiper button{width: 100%; height: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center;}
-
-.swiper-slide {overflow: visible !important;}
-
-.comment-wrap{margin-top: 7rem; padding: 0 30px 3rem;}
-.card-list li + li{margin-top: 2rem;}
-.card-list .card-box{position: relative; padding: 3rem 2rem 2.5rem; background-color: #fff; border-radius: 1.2rem; box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.08); text-align: left;}
-.card-list .card-box p{font-size: 1.4rem; word-break: keep-all;}
-.card-list .card-box .name{font-size: 1.3rem; color: #999; vertical-align: 0;}
-.card-list .card-box .name span{font-size: 1.5rem; vertical-align: bottom;}
-.card-list .card-box .date{font-size: 1.3rem; color: #999; vertical-align: 0;}
-.card-list .card-info{display: flex; align-items: flex-end; justify-content: space-between; margin-top: 1rem;}
-.card-list .card-actions{position: absolute; top: 1rem; right: 1rem; display: flex; gap: 0.5rem;}
-.card-list .btn-edit{width: 2rem; height: 2rem; background: url(../img/ico-card-edit.svg) center / 1.6rem no-repeat;}
-.card-list .btn-del{width: 2rem; height: 2rem; background: url(../img/ico-card-del.svg) 0 / 100% no-repeat;}
-
-.comment-box .ip-box + .ip-box{margin-top: 1rem;}
-.comment-box .ip-box .form-ip{display: block; width: 100%; height: 4.4rem; border: 1px solid #eee; border-radius: .6rem; padding: 0 1.2rem; font-size: 1.4rem; line-height: 1.8rem;}
-.comment-box .err-msg{display: block; margin-top: 1rem; color: #ef665b; font-size: 1.2rem; line-height: 1;}
-.comment-box .err-msg:before{content: ''; display: inline-block; width: 1.2rem; height: 1.2rem; margin: 0 .5rem 0 0; background: url(../img/ico-caution.svg) 0 / 100% no-repeat; vertical-align: top;}
-
-.comment-box .ip-box .form-ta{display: block; width: 100%; height: 20rem; border: 1px solid #eee; border-radius: .6rem; padding: 1.2rem; font-size: 1.4rem; line-height: 1.8rem;}
-
-.btn-comment{display: block; margin-top: 2rem; width: 100%; height: 4.4rem; background-color: #4e5972; color: #fff; border-radius: .6rem; padding: 0 1.2rem; font-size: 1.4rem; line-height: 4.2rem; text-align: center;}
-.comment-desc{text-align: left; color: #000; line-height: 3.2rem;}
-
-.btn-top{display: none; position: fixed; bottom: 2rem; right: 2rem; width: 4rem; height: 4rem; background: #fff url(../img/ico-go-top.svg) center / 2.4rem no-repeat; border: 1px solid #eee; border-radius: 50%; z-index: 999;}
-.btn-top.active{display: block; animation: goTop .3s forwards;}
-
-@keyframes goTop {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem);
+  .wedding-header h1 {
+    font-size: 28px;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+  
+  .main-photo {
+    padding: 0 20px;
+  }
+  
+  .couple-info, .wedding-datetime, .photo-gallery, .wedding-map, .guestbook, .calendar-wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .wedding-message {
+    margin: 0 10px;
+    padding: 30px 20px;
+  }
+  
+  .photo-grid {
+    gap: 10px;
+  }
+  
+  .cal-inner {
+    padding: 20px 15px;
+  }
+  
+  .tbl-cal th {
+    height: 3rem;
+    font-size: 1.2rem;
+  }
+  
+  .tbl-cal td {
+    height: 4rem;
+    font-size: 1.2rem;
+  }
+  
+  .tbl-cal .wedding-day::after {
+    font-size: 0.8rem;
+    bottom: -1rem;
+    white-space: nowrap;
+    padding: 0 2px;
   }
 }
+
+/* 더 작은 화면 대응 (350px 이하) */
+@media (max-width: 350px) {
+  .tbl-cal .wedding-day::after {
+    font-size: 0.7rem;
+    content: "오후 4:40";
+    bottom: -0.8rem;
+  }
+  
+  .cal-inner {
+    padding: 15px 10px;
+  }
+}
+
+/* 교통정보 스타일 */
+.how-to-go {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.transport-item {
+  padding: 20px;
+  text-align: left;
+  border-bottom: 1px dashed rgba(130, 2, 1, 0.3);
+}
+
+.transport-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+  padding: 10px 0;
+  position: relative;
+}
+
+.transport-title::before {
+  display: inline-block;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin: 0 0.7rem 0 0;
+  vertical-align: middle;
+}
+
+.transport-title.subway::before {
+  content: '';
+  background: url("../img/아이콘_지하철.png") no-repeat center / contain;
+}
+
+.transport-title.bus::before {
+  content: '';
+  background: url("../img/아이콘_버스.png") no-repeat center / contain;
+}
+
+.transport-title.car::before {
+  content: '';
+  background: url("../img/아이콘_차량대절.png") no-repeat center / contain;
+}
+
+.transport-title.parking::before {
+  content: '';
+  background: url("../img/아이콘_주차안내.png") no-repeat center / contain;
+}
+
+.transport-item p:not(.transport-title) {
+  color: #333;
+  line-height: 1.4;
+  font-size: 17px;
+  margin: 5px 0;
+  margin-left: 2.5rem;
+}
+
+/* 식사 정보 스타일 */
+.meal-info {
+  padding: 0 30px;
+  text-align: center;
+}
+
+.meal-title {
+  font-size: 24px;
+  color: #c2a382;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.meal-subtitle {
+  font-size: 18px;
+  color: #2c2c2c;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+.meal-image {
+  margin: 30px 0;
+}
+
+.meal-img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.meal-description {
+  color: #2c2c2c;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* 빨간색 구역 5: 계좌 정보 */
+.red-section-5 {
+  background: #fff8eb;
+  padding: 100px 0;
+  margin: 0;
+  margin-top: -1px;
+}
+
+/* 계좌 정보 스타일 */
+.account-info {
+  padding: 0 30px;
+  text-align: center;
+}
+
+.account-title {
+  font-size: 24px;
+  color: #c2a382;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.account-subtitle {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+.account-description {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 50px;
+  font-size: 16px;
+}
+
+.account-fold-box {
+  background: rgba(251, 241, 222, 0.8);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.account-fold-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(251, 241, 222, 0.8);
+  color: #c2a382;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  border: 1.5px solid rgba(121, 85, 61, 0.25);
+  border-radius: 10px;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.account-fold-header p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.btn-account-fold {
+  background: none;
+  border: none;
+  color: #c2a382;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.account-fold-header:hover {
+  background: rgba(194, 163, 130, 0.3);
+  border-color: rgba(194, 163, 130, 0.5);
+}
+
+.btn-account-fold::after {
+  content: '▼';
+  transition: transform 0.3s ease;
+}
+
+.account-fold-box.active .btn-account-fold::after {
+  transform: rotate(180deg);
+}
+
+.account-fold-content {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  background: #fff8eb;
+  border-radius: 0 0 10px 10px;
+}
+
+.account-fold-box.active .account-fold-content {
+  padding: 20px;
+  max-height: 500px;
+}
+
+.account-box {
+  display: grid;
+  grid-template-columns: 1fr 2fr auto;
+  align-items: center;
+  padding: 15px;
+  background: rgba(245, 235, 220, 0.5);
+  border: 1.5px solid rgba(181, 140, 99, 0.3);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.account-box:last-child {
+  margin-bottom: 0;
+}
+
+.account-box .account-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.account-box p {
+  margin: 0;
+  color: #2c2c2c;
+}
+
+.account-box span {
+  font-weight: bold;
+}
+
+.account-num {
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-copy {
+  background: rgba(255, 250, 205, 0.3);
+  color: #333;
+  border: 1.5px solid rgba(121, 85, 61, 0.25);
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  font-size: 12px;
+  position: relative;
+  z-index: 10;
+}
+
+.btn-copy:hover {
+  background: rgba(130, 2, 1, 0.1);
+  border: 2px solid rgba(130, 2, 1, 0.2);
+  color: #820201;
+}
+
+/* 빨간색 구역 6: 푸터 */
+.red-section-6 {
+  background: #fff8eb;
+  padding: 40px 0 40px;
+  margin: 0;
+  margin-top: -1px;
+}
+
+/* AOS 애니메이션 활성화 - 초기 상태만 설정 */
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+/* 반응형: 교통정보 */
+@media (max-width: 480px) {
+  .how-to-go {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .transport-item {
+    padding: 15px;
+  }
+  
+  .transport-title {
+    font-size: 16px;
+  }
+  
+  .meal-info, .account-info {
+    padding: 0 20px;
+  }
+  
+  .account-fold-header {
+    padding: 15px;
+  }
+  
+  .account-box {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    text-align: center;
+  }
+  
+  .account-box .btn-copy {
+    justify-self: center;
+    width: auto;
+    padding: 8px 20px;
+  }
+}
+
+/* 팝업 기본 스타일 */
+body.popup-open {
+  overflow: hidden;
+}
+
+.popup-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: none;
+}
+
+.popup-wrap.active {
+  display: block;
+}
+
+.popup-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.popup {
+  position: relative;
+  z-index: 10;
+  background: #FEFAEF;
+  border-radius: 20px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.popup-mid .popup {
+  width: 400px;
+  max-width: 90vw;
+  max-height: 80vh;
+}
+
+.popup-full .popup {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 0;
+  background: #000;
+}
+
+.pop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(130, 2, 1, 0.1);
+  background: #FEFAEF;
+}
+
+.popup-full .pop-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  border: none;
+  background: transparent;
+  padding: 20px;
+}
+
+.comment-desc {
+  font-size: 18px;
+  font-weight: normal;
+  color: #820201;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+.btn-close {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: rgba(130, 2, 1, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.btn-close:hover {
+  background: rgba(130, 2, 1, 0.2);
+  transform: scale(1.1);
+}
+
+.btn-close::before {
+  content: '✕';
+  color: #820201;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.popup-full .btn-close {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.popup-full .btn-close::before {
+  color: #333;
+}
+
+.pop-body {
+  padding: 0;
+  overflow-y: auto;
+  max-height: calc(80vh - 80px);
+}
+
+.popup-full .pop-body {
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 갤러리 전체화면 팝업 스타일 */
+.gallery-swiper {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+}
+
+.gallery-swiper .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-swiper .swiper-wrapper {
+  align-items: center;
+}
+
+.gallery-swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-swiper .swiper-slide button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-swiper .img-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.gallery-swiper .img-box img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-swiper .swiper-pagination {
+  bottom: 30px;
+}
+
+.gallery-swiper .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5);
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.gallery-swiper .swiper-pagination-bullet-active {
+  background: #FEFAEF;
+  transform: scale(1.2);
+}
+
+.gallery-swiper .swiper-button-next,
+.gallery-swiper .swiper-button-prev {
+  color: #333;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.gallery-swiper .swiper-button-next:hover,
+.gallery-swiper .swiper-button-prev:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
+.gallery-swiper .swiper-button-next::after,
+.gallery-swiper .swiper-button-prev::after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* 방명록 팝업 스타일 */
+.comment-box {
+  padding: 30px;
+}
+
+.ip-box {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-ip {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid rgba(130, 2, 1, 0.1);
+  border-radius: 10px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.form-ip:focus {
+  outline: none;
+  border-color: rgba(130, 2, 1, 0.3);
+  box-shadow: 0 0 0 3px rgba(130, 2, 1, 0.1);
+}
+
+.form-ip::placeholder {
+  color: rgba(130, 2, 1, 0.5);
+}
+
+.form-ta {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid rgba(130, 2, 1, 0.1);
+  border-radius: 10px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.5;
+}
+
+.form-ta:focus {
+  outline: none;
+  border-color: rgba(130, 2, 1, 0.3);
+  box-shadow: 0 0 0 3px rgba(130, 2, 1, 0.1);
+}
+
+.form-ta::placeholder {
+  color: rgba(130, 2, 1, 0.5);
+}
+
+.btn-comment {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: rgba(251, 241, 222, 0.8);
+  border: 1.5px solid rgba(121, 85, 61, 0.25);
+  border-radius: 25px;
+  color: #c2a382;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.btn-comment:hover {
+  background: rgba(194, 163, 130, 0.3);
+  border-color: rgba(194, 163, 130, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(194, 163, 130, 0.3);
+}
+
+.btn-comment:active {
+  transform: translateY(0);
+}
+
+/* 에러 메시지 */
+.err-msg {
+  color: #352700;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  display: none;
+}
+
+.err-msg.show {
+  display: block;
+}
+
+/* 방명록 제목 */
+.guestbook-subtitle {
+  text-align: center;
+  color: #352700;
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* 방명록 카드 수정/삭제 버튼 업데이트 */
+.card-box {
+  position: relative;
+}
+
+.btn-edit, .btn-del {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(130, 2, 1, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #820201;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.btn-del {
+  right: 50px;
+}
+
+.btn-edit:hover, .btn-del:hover {
+  background: rgba(130, 2, 1, 0.2);
+  transform: scale(1.1);
+}
+
+.btn-edit[data-pop-tg="popCommentEdit"]::before {
+  content: "✏️";
+}
+
+.btn-del[data-pop-tg="popCommentDel"]::before {
+  content: "🗑️";
+}
+
+/* 반응형: 팝업 */
+@media (max-width: 480px) {
+  .popup-mid .popup {
+    width: 95vw;
+    margin: 20px;
+  }
+  
+  .comment-box {
+    padding: 20px;
+  }
+  
+  .pop-header {
+    padding: 15px;
+  }
+  
+  .comment-desc {
+    font-size: 16px;
+  }
+  
+  .form-ip, .form-ta {
+    padding: 12px;
+    font-size: 14px;
+  }
+  
+  .btn-comment {
+    padding: 12px;
+    font-size: 14px;
+  }
+  
+  .gallery-swiper .swiper-button-next,
+  .gallery-swiper .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+  }
+  
+  .gallery-swiper .swiper-button-next::after,
+  .gallery-swiper .swiper-button-prev::after {
+    font-size: 14px;
+  }
+  
+  .gallery-swiper .img-box {
+    padding: 10px;
+  }
+}
+
