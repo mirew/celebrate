@@ -1112,47 +1112,55 @@ html.zoom .guestbook-subtitle {
 }
 
 .account-fold-box {
+  margin-top: 20px;
   background: rgba(251, 241, 222, 0.8);
+  border-radius: 12px;
+  padding: 16px 20px 16px;
   margin-bottom: 20px;
   overflow: hidden;
 }
 
 .account-fold-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background: rgba(251, 241, 222, 0.8);
-  color: #c2a382;
-  cursor: pointer;
   position: relative;
-  z-index: 10;
-  border: 1.5px solid rgba(121, 85, 61, 0.25);
-  border-radius: 10px;
-  transition: background 0.3s ease, border-color 0.3s ease;
+  text-align: left;
+  cursor: pointer;
+}
+
+.account-fold-box.active .account-fold-header {
+  padding-bottom: 15px;
+  border-bottom: 1px dashed rgba(194, 163, 130, 0.4);
+  margin-bottom: 15px;
 }
 
 .account-fold-header p {
   font-size: 18px;
-  font-weight: bold;
+  line-height: 30px;
   margin: 0;
+  color: #c2a382;
+  font-weight: bold;
 }
 
 .btn-account-fold {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: none;
   border: none;
-  color: #c2a382;
   cursor: pointer;
-  font-size: 20px;
-}
-
-.account-fold-header:hover {
-  background: rgba(194, 163, 130, 0.3);
-  border-color: rgba(194, 163, 130, 0.5);
 }
 
 .btn-account-fold::after {
-  content: '▼';
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 5px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23c2a382" stroke-width="2"><polyline points="6,9 12,15 18,9"></polyline></svg>') 0 / 100% no-repeat;
+  vertical-align: top;
   transition: transform 0.3s ease;
 }
 
@@ -1161,49 +1169,58 @@ html.zoom .guestbook-subtitle {
 }
 
 .account-fold-content {
-  padding: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-  background: #fff8eb;
-  border-radius: 0 0 10px 10px;
+  display: none;
 }
 
 .account-fold-box.active .account-fold-content {
-  padding: 20px;
-  max-height: 500px;
+  display: block;
+  animation: foldCont 0.3s forwards;
 }
 
-.account-box {
-  display: grid;
-  grid-template-columns: 1fr 2fr auto;
-  align-items: center;
-  padding: 15px;
-  background: rgba(245, 235, 220, 0.5);
-  border: 1.5px solid rgba(181, 140, 99, 0.3);
-  border-radius: 10px;
-  margin-bottom: 10px;
-  gap: 10px;
+@keyframes foldCont {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.account-box:last-child {
-  margin-bottom: 0;
+.account-fold-content .account-box {
+  position: relative;
 }
 
-.account-box .account-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+.account-fold-content .account-box + .account-box {
+  margin-top: 16px;
 }
 
-.account-box p {
+.account-fold-content .account-box p {
+  font-size: 14px;
+  text-align: left;
+  color: #858e96;
   margin: 0;
-  color: #2c2c2c;
 }
 
-.account-box span {
+.account-fold-content .account-box p span {
+  padding-left: 8px;
+  font-size: 16px;
+  vertical-align: 0;
+  color: #c2a382;
   font-weight: bold;
+}
+
+.account-fold-content .account-box .account-num {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #000;
+}
+
+.account-fold-content .account-box .btn-copy {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .account-num {
