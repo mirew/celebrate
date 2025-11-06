@@ -758,6 +758,63 @@ html.zoom .guestbook-subtitle {
   font-size: 20px;
 }
 
+/* 추가 확대 스타일 */
+html.zoom .calendar-title {
+  font-size: 30px;
+}
+
+html.zoom .btn-more {
+  font-size: 20px;
+}
+
+html.zoom .transport-title {
+  font-size: 20px;
+}
+
+html.zoom .how-to-go .transport-item p {
+  font-size: 20px;
+}
+
+html.zoom .transport-item .transport-title.subway {
+  font-size: 24px !important;
+}
+
+html.zoom .transport-item .transport-title.bus {
+  font-size: 24px !important;
+}
+
+html.zoom .transport-item .transport-title.parking {
+  font-size: 24px !important;
+}
+
+html.zoom .transport-item .transport-title.car {
+  font-size: 24px !important;
+}
+
+html.zoom .meal-subtitle {
+  font-size: 20px;
+}
+
+html.zoom .account-fold-header p {
+  font-size: 25px;
+}
+
+html.zoom .account-fold-content .account-box p {
+  font-size: 20px;
+}
+
+html.zoom .account-fold-content .account-box p span {
+  font-size: 22px;
+}
+
+html.zoom .account-fold-content .account-box .account-num {
+  font-size: 22px;
+}
+
+html.zoom .btn-comment {
+  font-size: 22px;
+}
+
 .btn-silent {
   width: 50px;
   height: 50px;
