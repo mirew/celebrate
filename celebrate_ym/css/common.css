@@ -1326,7 +1326,7 @@ body.popup-open {
 .popup {
   position: relative;
   z-index: 10;
-  background: #FEFAEF;
+  background: #fff8eb;
   border-radius: 20px;
   max-width: 90%;
   max-height: 90%;
@@ -1355,7 +1355,7 @@ body.popup-open {
   align-items: center;
   padding: 20px;
   border-bottom: 1px solid rgba(130, 2, 1, 0.1);
-  background: #FEFAEF;
+  background: #fff8eb;
 }
 
 .popup-full .pop-header {
@@ -1401,6 +1401,23 @@ body.popup-open {
   color: #820201;
   font-size: 16px;
   font-weight: bold;
+}
+
+/* 방명록 팝업의 닫기 버튼 스타일 */
+.popup-mid .btn-close {
+  background: rgba(251, 241, 222, 0.8);
+  border: 1.5px solid rgba(121, 85, 61, 0.25);
+}
+
+.popup-mid .btn-close:hover {
+  background: rgba(194, 163, 130, 0.3);
+  border-color: rgba(194, 163, 130, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(194, 163, 130, 0.3);
+}
+
+.popup-mid .btn-close::before {
+  color: #c2a382;
 }
 
 .popup-full .btn-close {
@@ -1496,7 +1513,7 @@ body.popup-open {
 }
 
 .gallery-swiper .swiper-pagination-bullet-active {
-  background: #FEFAEF;
+  background: #fff8eb;
   transform: scale(1.2);
 }
 
@@ -1612,11 +1629,12 @@ body.popup-open {
 
 /* 에러 메시지 */
 .err-msg {
-  color: #352700;
+  color: #d2691e;
   font-size: 14px;
   margin-top: 5px;
   margin-bottom: 0;
   display: none;
+  font-weight: bold;
 }
 
 .err-msg.show {
