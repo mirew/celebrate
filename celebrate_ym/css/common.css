@@ -1342,8 +1342,12 @@ html.zoom .btn-comment {
     padding: 0 20px;
   }
   
+  .account-fold-box {
+    padding: 12px 15px 12px;
+  }
+  
   .account-fold-header {
-    padding: 15px;
+    padding: 0;
   }
   
   .account-box {
