@@ -1048,7 +1048,7 @@ html.zoom .btn-comment {
 .transport-item {
   padding: 20px;
   text-align: left;
-  border-bottom: 1px dashed rgba(130, 2, 1, 0.3);
+  border-bottom: 1px dashed #c2a382;
 }
 
 .transport-title {
