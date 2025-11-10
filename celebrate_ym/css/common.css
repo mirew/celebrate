@@ -502,7 +502,7 @@ body {
 .wedding-footer {
   text-align: center;
   padding: 0 30px;
-  color: #820201;
+  color: #c2a382;
   font-size: 16px;
 }
 
@@ -1449,7 +1449,7 @@ body.popup-open {
 .comment-desc {
   font-size: 18px;
   font-weight: normal;
-  color: #820201;
+  color: #c2a382;
   margin: 0;
   flex: 1;
   text-align: center;
@@ -1632,7 +1632,7 @@ body.popup-open {
 .form-ip {
   width: 100%;
   padding: 15px;
-  border: 2px solid rgba(130, 2, 1, 0.1);
+  border: 2px solid rgba(194, 163, 130, 0.3);
   border-radius: 10px;
   font-size: 16px;
   background: rgba(255, 255, 255, 0.8);
@@ -1643,18 +1643,18 @@ body.popup-open {
 
 .form-ip:focus {
   outline: none;
-  border-color: rgba(130, 2, 1, 0.3);
-  box-shadow: 0 0 0 3px rgba(130, 2, 1, 0.1);
+  border-color: rgba(194, 163, 130, 0.6);
+  box-shadow: 0 0 0 3px rgba(194, 163, 130, 0.2);
 }
 
 .form-ip::placeholder {
-  color: rgba(130, 2, 1, 0.5);
+  color: rgba(194, 163, 130, 0.7);
 }
 
 .form-ta {
   width: 100%;
   padding: 15px;
-  border: 2px solid rgba(130, 2, 1, 0.1);
+  border: 2px solid rgba(194, 163, 130, 0.3);
   border-radius: 10px;
   font-size: 16px;
   background: rgba(255, 255, 255, 0.8);
@@ -1668,12 +1668,12 @@ body.popup-open {
 
 .form-ta:focus {
   outline: none;
-  border-color: rgba(130, 2, 1, 0.3);
-  box-shadow: 0 0 0 3px rgba(130, 2, 1, 0.1);
+  border-color: rgba(194, 163, 130, 0.6);
+  box-shadow: 0 0 0 3px rgba(194, 163, 130, 0.2);
 }
 
 .form-ta::placeholder {
-  color: rgba(130, 2, 1, 0.5);
+  color: rgba(194, 163, 130, 0.7);
 }
 
 .btn-comment {
