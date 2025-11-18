@@ -686,7 +686,7 @@
 
 </body>
 
-<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=f6a8d04a541dd997f1d94da642ed9e7a"></script>
+<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=f6a8d04a541dd997f1d94da642ed9e7a"></script>
 <script>
   function initMap() {
     var container = document.getElementById('map');
@@ -710,16 +710,9 @@
     // infowindow.open(map, marker);
   }
 
-  // 카카오맵 API 로드 확인 및 초기화
-  function waitForKakao() {
-    if (typeof kakao !== 'undefined' && kakao.maps) {
-      kakao.maps.load(initMap);
-    } else {
-      setTimeout(waitForKakao, 100);
-    }
-  }
-  
-  setTimeout(waitForKakao, 1000);
+  setTimeout(() => {
+    kakao.maps.load(initMap);
+  }, 1000);
 </script>
 
 </html>
