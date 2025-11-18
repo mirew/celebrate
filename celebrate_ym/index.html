@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/libs/aos/aos.css">
     <link rel="stylesheet" href="css/libs/swiper/swiper-bundle.min.css">
     
+    
     <!-- 파비콘 -->
     <link rel="icon" href="img/KakaoTalk_20250911_160625234_04.jpg" type="image/jpeg">
     
@@ -281,7 +282,7 @@
                 <h2 class="map-title">Location</h2>
                 <p class="map-subtitle">오시는 길</p>
                 <div class="map-container">
-                    <img src="img/map.jpg" alt="강변 웨딩스퀘어 위치 지도" class="map-image">
+                    <div id="map" style="width:100%;height:300px;"></div>
                 </div>
                 <div class="location-info">
                     <strong>강변 웨딩스퀘어 루시드홀</strong><br>
@@ -684,4 +685,34 @@
     <script src="js/ui.js"></script>
 
 </body>
+
+<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=f6a8d04a541dd997f1d94da642ed9e7a"></script>
+<script>
+  function initMap() {
+    var container = document.getElementById('map');
+    var options = {
+      center: new kakao.maps.LatLng(37.535652410, 127.095740603), // 강변 웨딩스퀘어 위치
+      level: 3
+    };
+    var map = new kakao.maps.Map(container, options);
+
+    // 마커 생성
+    var markerPosition = new kakao.maps.LatLng(37.535652410, 127.095740603);
+    var marker = new kakao.maps.Marker({
+      position: markerPosition
+    });
+    marker.setMap(map);
+
+    // 인포윈도우 생성
+    // var infowindow = new kakao.maps.InfoWindow({
+    //   content: '<div style="padding:5px;font-size:12px;">강변 웨딩스퀘어 루시드홀<br>테크노마트 3층</div>'
+    // });
+    // infowindow.open(map, marker);
+  }
+
+  setTimeout(() => {
+    kakao.maps.load(initMap);
+  }, 1000);
+</script>
+
 </html>
