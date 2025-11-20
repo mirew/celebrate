@@ -1267,6 +1267,10 @@ body.popup-open {
   max-height: calc(80vh - 8rem);
 }
 
+.pop-body .btn-comment{
+  margin-top: 3rem;
+}
+
 .popup-full .pop-body {
   max-height: 100vh;
   display: flex;
