@@ -1,11 +1,11 @@
 @charset "utf-8";
 
 @font-face {
-  font-family: 'Cafe24Oneprettynight';
+  font-family: 'IropkeBatang';
   font-style: normal;
   font-weight: 400;
-  src: url('font/Cafe24Oneprettynight-v2.0.woff2') format('woff2'),
-    url('font/Cafe24Oneprettynight-v2.0.woff') format('woff'),
+  src: url('font/IropkeBatangM.eot') format('eot'),
+    url('font/IropkeBatangM.woff') format('woff'),
 }
 
 /* @font-face {
