@@ -1042,7 +1042,7 @@ html.zoom {
 }
 .account-fold-box.active .btn-account-fold::after {
   transform: rotate(-45deg);
-  top: 1.1rem
+  top: 1.4rem
 }
 
 .account-fold-content {
