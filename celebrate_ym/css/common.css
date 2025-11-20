@@ -17,7 +17,6 @@
 
 html{
   font-size: 62.5%;
-  overflow-x: hidden;
 }
 html, body {
   margin: 0;
@@ -25,7 +24,7 @@ html, body {
   width: 100%;
   min-height: 100vh;
   font-family: 'IropkeBatang', sans-serif;
-  background-color: #F3E8D6;
+  background-color: #EFE4CE;
   color: #121212;
 }
 
