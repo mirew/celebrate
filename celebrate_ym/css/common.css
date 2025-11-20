@@ -123,6 +123,14 @@ button{
   line-height: 1.6;
 }
 
+.wedding-header .subtitle span{
+  display: inline-block;
+  width: 2.8rem;
+  height: 1.5rem;
+  background: url(../img/ico-and.png) 0 / 100% no-repeat;
+   vertical-align: middle;
+}
+
 /* 메인 이미지 영역 */
 .main-photo {
   width: 26rem;
