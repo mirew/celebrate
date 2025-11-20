@@ -24,7 +24,7 @@ html, body {
   width: 100%;
   min-height: 100vh;
   font-family: 'IropkeBatang', sans-serif;
-  background-color: #F3E8D6;
+  background-color: #EFE4CE;
   color: #121212;
 }
 
@@ -383,6 +383,7 @@ button{
 /* 빨간색 구역 3: 지도 영역 */
 .red-section-3 {
   padding: 7rem 0;
+  background-color: #F3E8D6;
 }
 
 /* 지도 영역 */
@@ -568,6 +569,7 @@ html.zoom .card-info{
 .red-section-calendar {
   padding: 7rem 0;
   margin: 0;
+  background-color: #F3E8D6;
 }
 
 .calendar-wrap {
@@ -950,6 +952,7 @@ html.zoom {
 /* 빨간색 구역 5: 계좌 정보 */
 .red-section-5 {
   padding: 7rem 0;
+  background-color: #F3E8D6;
 }
 
 /* 계좌 정보 스타일 */
