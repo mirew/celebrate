@@ -633,7 +633,7 @@ html.zoom .card-info{
   color: #ff6b6b;
 }
 
-.tbl-cal thv:last-child,
+.tbl-cal th:last-child,
 .tbl-cal td:last-child {
   color: #4e5dcd;
 }
