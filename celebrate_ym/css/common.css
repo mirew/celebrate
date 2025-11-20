@@ -540,7 +540,7 @@ html.zoom .card-info{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: rgba(130, 2, 1, 0.7);
   margin-top: auto;
 }
