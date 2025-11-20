@@ -94,8 +94,14 @@ button{
   right: 0;
 }
 
+.red-section-1{
+  position: relative;
+  z-index: 1;
+}
+
 /* 헤더 영역 */
 .wedding-header {
+  
   text-align: center;
   padding: 6rem 3rem 4rem;
   position: relative;
