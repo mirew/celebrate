@@ -987,7 +987,7 @@ html.zoom {
   border-radius: 2.1rem;
   padding: .5rem 1rem;
   overflow: hidden;
-  transition: border-radius 0.3s ease;
+  transition: border-radius 0.7s ease;
 }
 
 .account-fold-box + .account-fold-box{
@@ -1054,7 +1054,7 @@ html.zoom {
 
 .account-fold-box.active .account-fold-content {
   display: block;
-  animation: foldCont 0.3s forwards;
+  animation: foldCont 0.7s forwards;
   padding: 1rem;
 }
 
